@@ -1,4 +1,4 @@
-// Function to extract total hours:minutes:seconds out of video titles with (minutes:seconds)
+// Function to extract total time out of video titles with (minutes:seconds)
 // Input: String
 // Output: String representing hours:minutes:seconds
 const extractTime = (string) => {
