@@ -1,7 +1,6 @@
 // Execute function for the following year
 const FOLDER_YEAR = 2024;
 
-const { subscribe } = require('diagnostics_channel');
 const fs = require('fs');
 const path = require('path');
 
