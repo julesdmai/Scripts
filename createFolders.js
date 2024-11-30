@@ -1,14 +1,24 @@
-// Execute function for the following year
-const FOLDER_YEAR = 2024;
+// NOTE: This is the paramater you - the user - changes ex. 2025
+const FOLDER_YEAR = 2024
 
 const fs = require('fs');
 const path = require('path');
 
+// Input: Number representing year
+// Output: This function will - create a folder directory for the year - in the same parent directory that the script is located in
+// The created folder directory will have the following structure
+// 2024
+// - 1 January
+// - 2 February
+// ...
+// - 12 December
+// - - RAW
+// - - JPEG
+// - - Edited 
 function createYearFolderStructure(year) {
-    const parentDir = __dirname; // Directory where the script is located
-    const yearDir = path.join(parentDir, year.toString()); // Path for the year folder
+    const parentDir = __dirname; // Parent directory is where the script is located
+    const yearDir = path.join(parentDir, year.toString()); // Create the parent to child folder relationship
 
-    // Array of months
     const months = [
         'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
     ];
@@ -19,12 +29,12 @@ function createYearFolderStructure(year) {
         console.log(`Created folder: ${yearDir}`);
     }
 
-    // Loop through each month and create folders
+    // Loop through each month and create folders for each month
     months.forEach((month, index) => {
         const monthFolderName = `${index + 1} ${month}`; // Ex: "1 January"
         const monthDir = path.join(yearDir, monthFolderName);
 
-        // Create the month folder
+        // Create the month folder if it doesn't exist
         if (!fs.existsSync(monthDir)) {
             fs.mkdirSync(monthDir);
             console.log(`Created folder: /${year}/${monthFolderName}`);
