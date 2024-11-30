@@ -1,20 +1,22 @@
 // NOTE: This is the paramater you - the user - changes ex. 2025
 const FOLDER_YEAR = 2024
 
-const fs = require('fs');
-const path = require('path');
-
-// Input: Number representing year
-// Output: This function will - create a folder directory for the year - in the same parent directory that the script is located in
-// The created folder directory will have the following structure
+// NOTE: 
+// This function - when invoked with "node createFolders.js" will create a folder directory with the following structure
 // 2024
 // - 1 January
 // - 2 February
-// ...
+// - ...
 // - 12 December
 // - - RAW
 // - - JPEG
 // - - Edited 
+
+const fs = require('fs');
+const path = require('path');
+
+// Input: Number representing year which you - the user - have specified above
+// Output: This function will - create a folder directory for the year - in the same parent directory that the script is located in
 function createYearFolderStructure(year) {
     const parentDir = __dirname; // Parent directory is where the script is located
     const yearDir = path.join(parentDir, year.toString()); // Create the parent to child folder relationship
