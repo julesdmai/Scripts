@@ -2,7 +2,7 @@
 const FOLDER_YEAR = 2024
 
 // NOTE: 
-// This function - when invoked with "node createFolders.js" will create a folder directory with the following structure
+// This function - when invoked with "node createFolders.js" - will create a folder directory with the following structure
 // 2024
 // - 1 January
 // - 2 February
@@ -11,6 +11,7 @@ const FOLDER_YEAR = 2024
 // - - RAW
 // - - JPEG
 // - - Edited 
+// TODO: Create a modified version of this function to paramterize the subfolder names as well
 
 const fs = require('fs');
 const path = require('path');
