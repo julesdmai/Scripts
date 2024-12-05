@@ -21,29 +21,29 @@ const path = require('path');
 
 // Input: Number representing year which you - the user - have specified above
 // Output: This function will - create a folder directory for the year - in the same parent directory that the script is located in
-function createFolderStructure(year) {
+function createFolderStructure(folderName) {
     const parentDir = __dirname; // Parent directory is where the script is located
-    const yearDir = path.join(parentDir, year.toString()); // Create the parent to child folder relationship
+    const folderDir = path.join(parentDir, folderName.toString()); // Create the parent to child folder relationship
 
     // Create the year folder if it doesn't exist
-    if (!fs.existsSync(yearDir)) {
-        fs.mkdirSync(yearDir);
-        console.log(`Created folder: ${yearDir}`);
+    if (!fs.existsSync(folderDir)) {
+        fs.mkdirSync(folderDir);
+        console.log(`Created folder: ${folderDir}`);
     }
 
     // Loop through each month and create folders for each month
-    months.forEach((month, index) => {
+    subSubfolderNames.forEach((month, index) => {
         const monthFolderName = `${index + 1} ${month}`; // Ex: "1 January"
-        const monthDir = path.join(yearDir, monthFolderName);
+        const monthDir = path.join(folderDir, monthFolderName);
 
         // Create the month folder if it doesn't exist
         if (!fs.existsSync(monthDir)) {
             fs.mkdirSync(monthDir);
-            console.log(`Created folder: /${year}/${monthFolderName}`);
+            console.log(`Created folder: /${folderName}/${monthFolderName}`);
         }
 
         // Create subfolders "RAW", "JPEG", and "Edited" in each month folder
-        ['RAW', 'JPEG', 'Edited'].forEach((subfolder, subIndex) => {
+        subfolderNames.forEach((subfolder, subIndex) => {
             const subfolderDir = path.join(monthDir, subfolder);
 
             if (!fs.existsSync(subfolderDir)) {
