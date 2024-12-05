@@ -50,7 +50,7 @@ function createFolderStructure(folderName) {
                 fs.mkdirSync(subfolderDir);
 
                 const subfolderNumber = index * 3 + subIndex + 1;
-                console.log(`Created subfolder ${subfolderNumber}`);
+                console.log(`Created sub-subfolder ${subfolderNumber}`);
             }
         });
     });
