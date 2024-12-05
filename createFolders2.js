@@ -21,7 +21,7 @@ const path = require('path');
 
 // Input: Number representing year which you - the user - have specified above
 // Output: This function will - create a folder directory for the year - in the same parent directory that the script is located in
-function createYearFolderStructure(year) {
+function createFolderStructure(year) {
     const parentDir = __dirname; // Parent directory is where the script is located
     const yearDir = path.join(parentDir, year.toString()); // Create the parent to child folder relationship
 
@@ -57,4 +57,4 @@ function createYearFolderStructure(year) {
 }
 
 // Execute the function for the year 2024
-createYearFolderStructure(parentFolderName);
+createFolderStructure(parentFolderName);
