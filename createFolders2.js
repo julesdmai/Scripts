@@ -56,5 +56,5 @@ function createFolderStructure(folderName) {
     });
 }
 
-// Execute the function for the year 2024
+// Execute the function for the parent folder "2024"
 createFolderStructure(parentFolderName);
