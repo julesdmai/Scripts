@@ -49,8 +49,8 @@ function createFolderStructure(folderName) {
             if (!fs.existsSync(subfolderDir)) {
                 fs.mkdirSync(subfolderDir);
 
-                const subfolderNumber = index * 3 + subIndex + 1;
-                console.log(`Created sub-subfolder ${subfolderNumber}`);
+                const subSubfolderNumber = index * 3 + subIndex + 1;
+                console.log(`Created sub-subfolder ${subSubfolderNumber}`);
             }
         });
     });
