@@ -43,7 +43,7 @@ function createFolderStructure(folderName) {
         }
 
         // Create subfolders "RAW", "JPEG", and "Edited" in each month folder
-        // TODO: Switch subfolder and subSubfolder
+        // TODO: Switch subfolder and subSubfolder names
         subfolderNames.forEach((subfolder, subIndex) => {
             const subfolderDir = path.join(monthDir, subfolder);
 
