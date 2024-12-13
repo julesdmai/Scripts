@@ -1,3 +1,6 @@
+// Still work in progress
+// TODO: Generalize the labels, keep the example the same
+
 // NOTE: These are the paramaters you - the user - changes ex. [2025], [months of the year], [RAW, JPEG, Edited]
 const parentFolderName = '2024'
 const subfolderNames = [
