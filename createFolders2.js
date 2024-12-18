@@ -32,30 +32,29 @@ function createFolderStructure(folderName) {
     // Create the year folder if it doesn't exist
     if (!fs.existsSync(folderDir)) {
         fs.mkdirSync(folderDir);
-        console.log(`Created folder: ${folderDir}`);
+        console.log(`Created parent folder: ${folderDir}`);
     }
 
     // Loop through each month and create folders for each month
-    subSubfolderNames.forEach((month, index) => {
-        const monthFolderName = `${index + 1} ${month}`; // Ex: "1 January"
-        const monthDir = path.join(folderDir, monthFolderName);
+    subfolderNames.forEach((month, index) => {
+        const subfolderName = `${index + 1} ${month}`; // Ex: "1 January"
+        const monthDir = path.join(folderDir, subfolderName);
 
         // Create the month folder if it doesn't exist
         if (!fs.existsSync(monthDir)) {
             fs.mkdirSync(monthDir);
-            console.log(`Created folder: /${folderName}/${monthFolderName}`);
+            console.log(`Created subfolder: /${folderName}/${subfolderName}`);
         }
 
         // Create subSbfolders "RAW", "JPEG", and "Edited" in each month folder
-        // TODO: Switch subfolder and subSubfolder names
-        subfolderNames.forEach((subfolder, subIndex) => {
+        subSubfolderNames.forEach((subfolder, subIndex) => {
             const subfolderDir = path.join(monthDir, subfolder);
 
             if (!fs.existsSync(subfolderDir)) {
                 fs.mkdirSync(subfolderDir);
 
                 const subSubfolderNumber = index * 3 + subIndex + 1;
-                console.log(`Created sub-subfolder ${subSubfolderNumber}`);
+                console.log(`Created sub-Subfolder ${subSubfolderNumber}`);
             }
         });
     });
