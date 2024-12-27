@@ -2,13 +2,6 @@
 // TODO: Generalize the labels (but keep the example the same)
 // TODO: Add descriptive console logs
 
-// NOTE: These are the paramaters you - the user - changes ex. [2025], [months of the year], [RAW, JPEG, Edited]
-const parentFolderName = '2024'
-const subfolderNames = [
-    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
-];
-const subSubfolderNames = ['RAW', 'JPEG', 'Edited'];
-
 // NOTE: 
 // This function - when invoked with "node createFolders.js" - will create a folder directory with the following structure
 // 2024
@@ -20,6 +13,15 @@ const subSubfolderNames = ['RAW', 'JPEG', 'Edited'];
 // - - JPEG
 // - - Edited 
 
+// NOTE: These are the paramaters you - the user - changes ex. [2025], [months of the year], [RAW, JPEG, Edited]
+const parentFolderName = '2024'
+const subfolderNames = [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+];
+const subSubfolderNames = ['RAW', 'JPEG', 'Edited'];
+
+
+// Start of function
 const fs = require('fs');
 const path = require('path');
 
