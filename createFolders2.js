@@ -20,8 +20,6 @@ const subfolderNames = [
 ];
 const subSubfolderNames = ['RAW', 'JPEG', 'Edited'];
 
-
-// Start of function
 const fs = require('fs');
 const path = require('path');
 
