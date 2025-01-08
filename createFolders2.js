@@ -13,7 +13,7 @@
 // - - JPEG
 // - - Edited 
 
-// NOTE: These are the paramaters you - the user - changes ex. [2025], [months of the year], [RAW, JPEG, Edited]
+// NOTE: These are the paramaters you - the user - changes ex. [2025], [...months of the year], [RAW, JPEG, Edited]
 const parentFolderName = '2024'
 const subfolderNames = [
     'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
