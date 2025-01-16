@@ -6,14 +6,18 @@ const yourLastName = 'YOUR_LAST_NAME';
 // This function, when invoked, will check into your flight at a point in time. Intended to be used with a scheduler such as cron or TamperMonkey
 function checkInFlight(confNbr, firstName, lastName) {
     'use strict';
-    
-    // Fill in the form fields
 
-    // Submit the form at a specific time
+    // Wrapper to ensure DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fill in the form fields
 
-    // Time check
+        // Submit the form at a specific time
 
-    return;
+        // Time check
+
+        return;
+
+    });
 }
 
 // Function invocation
