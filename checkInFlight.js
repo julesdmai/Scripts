@@ -17,11 +17,19 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
 
         // Submit the form at a specific time
         const currentTime = new Date();
+        const timeUntilCheckIn = checkInTime - currentTime;
 
         // Time check
-
-        return;
-
+        if (timeUntilCheckIn > 0) {
+            setTimeout(() => {
+                document.querySelector('button[type="submit"]').click();
+            }, timeUntilCheckIn);
+            console.log('Your check in has been completed');
+            return;
+        } else {
+            console.log('The check in time has already passed');
+            return;
+        }
     });
 }
 
