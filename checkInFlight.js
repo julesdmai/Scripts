@@ -21,6 +21,7 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
         const timeUntilCheckIn = checkInTime - currentTime;
 
         // Time check
+        // TODO: Re-calculate timeUntilCheckIn if too early still
         if (timeUntilCheckIn > 0) {
             setTimeout(() => {
                 document.querySelector('button[type="submit"]').click();
