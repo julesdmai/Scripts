@@ -11,6 +11,7 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
     // Wrapper to ensure DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
         // Fill in the form fields
+        // TODO: Confirm ID fields
         document.getElementById('confirmationNumber').value = confNbr;
         document.getElementById('passengerFirstName').value = firstName;
         document.getElementById('passengerLastName').value = lastName;
