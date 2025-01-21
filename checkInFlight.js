@@ -25,9 +25,8 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
         if (timeUntilCheckIn > 0) {
             setTimeout(() => {
                 document.querySelector('button[type="submit"]').click();
+                console.log('Your check in has been completed');
             }, timeUntilCheckIn);
-            console.log('Your check in has been completed');
-            return;
         } else {
             console.log('The check in time has already passed');
             return;
