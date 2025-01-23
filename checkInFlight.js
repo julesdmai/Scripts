@@ -1,8 +1,15 @@
 // These are the parameters you - the user - will need to modify
-const yourConfirmationNumber = 'YOUR_CONFIRMATION_NUMBER';
-const yourFirstName = 'YOUR_FIRST_NAME';
-const yourLastName = 'YOUR_LAST_NAME';
-const yourCheckInTime = new Date('2025-01-01T12:00:00') // Adjust to your check-in time
+const yourConfirmationNumber = '12341234';
+const yourFirstName = 'John';
+const yourLastName = 'Doe';
+const targetTime = { 
+    hour: 13, 
+    minute: 5, 
+    second: 0,
+    milliseconds: 0
+}; // 1:05 PM in 24-hour format
+const yourCheckInTime = new Date();
+yourCheckInTime.setHours(targetTime.hour, targetTime.minute, targetTime.second, targetTime.milliseconds);
 
 // This function, when invoked, will check into your flight at a point in time. Intended to be used with a scheduler such as cron or TamperMonkey
 function checkInFlight(confNbr, firstName, lastName, checkInTime) {
@@ -20,7 +27,6 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
         const timeUntilCheckIn = checkInTime - currentTime;
 
         // Time check
-        // TODO: Re-calculate timeUntilCheckIn if too early still
         if (timeUntilCheckIn > 0) {
             setTimeout(() => {
                 document.querySelector('button[type="submit"]').click();
