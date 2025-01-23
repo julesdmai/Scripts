@@ -1,22 +1,22 @@
 // These are the parameters you - the user - will need to modify
 const yourConfirmationNumber = '12341234';
-const yourFirstName = 'John';
-const yourLastName = 'Doe';
+const yourFirstName = 'Harry';
+const yourLastName = 'Potter';
 const targetTime = { 
     hour: 13, 
     minute: 5, 
     second: 0,
     milliseconds: 0
-}; // 1:05 PM in 24-hour format
+};
 const yourCheckInTime = new Date();
 yourCheckInTime.setHours(targetTime.hour, targetTime.minute, targetTime.second, targetTime.milliseconds);
 
 // This function, when invoked, will check into your flight at a point in time. Intended to be used with a scheduler such as cron or TamperMonkey
 function checkInFlight(confNbr, firstName, lastName, checkInTime) {
-    'use strict';
 
     // Wrapper to ensure DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
+        // TODO: Check to see if these elements have even be loaded in yet
         // Fill in the form fields
         document.getElementById('confirmationNumber').value = confNbr;
         document.getElementById('passengerFirstName').value = firstName;
