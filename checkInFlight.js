@@ -16,11 +16,23 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
 
     // Wrapper to ensure DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
+        
+        /*
         // TODO: Check to see if these elements have even be loaded in yet
+        // TODO: Create a variable for the submit button as well
+        const confNumberInput = document.getElementById('confirmationNumber')
+        const firstNameInput = document.getElementById('passengerFirstName')
+        const lastNameInput = document.getElementById('passengerLastName')
+        console.log(confNumberInput);
+        */
+
         // Fill in the form fields
         document.getElementById('confirmationNumber').value = confNbr;
         document.getElementById('passengerFirstName').value = firstName;
         document.getElementById('passengerLastName').value = lastName;
+
+        // TODO: Recheck to see if appropriate values have been filled in
+        // console.log(confNumberInput);
 
         // Submit the form at a specific time
         const currentTime = new Date();
