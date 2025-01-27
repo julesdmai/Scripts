@@ -20,6 +20,7 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
         /*
         // TODO: Check to see if these elements have even be loaded in yet
         // TODO: Create a variable for the submit button as well
+
         const confNumberInput = document.getElementById('confirmationNumber')
         const firstNameInput = document.getElementById('passengerFirstName')
         const lastNameInput = document.getElementById('passengerLastName')
