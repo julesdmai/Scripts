@@ -18,8 +18,6 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
         // Time check
         const currentTime = new Date();
         const timeUntilCheckIn = checkInTime - currentTime;
-
-        // Time check
         if (timeUntilCheckIn > 0) {
             console.log(`Waiting ${timeUntilCheckIn} ms until the target time...`);
             setTimeout(() => {
@@ -32,11 +30,7 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
             return;
         }
 
-        // TODO: Function for autofillAndSubmit
         function autoFillAndSubmit() {
-            // TODO: Check to see if these elements have even be loaded in yet
-            // TODO: Create a variable for the submit button as well
-
             const confNumberInput = document.getElementById('confirmationNumber')
             const firstNameInput = document.getElementById('passengerFirstName')
             const lastNameInput = document.getElementById('passengerLastName')
@@ -48,10 +42,12 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
             firstNameInput.value = firstName;
             lastNameInput.value = lastName;
             
-            // TODO: Recheck to see if appropriate values have been filled in
+            // Recheck to see if appropriate values have been filled in
             console.log(confNumberInput);
             console.log(firstNameInput);
             console.log(lastNameInput);
+
+            // submitButton.click();
         }
     });
 }
