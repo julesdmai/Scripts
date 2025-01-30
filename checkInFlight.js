@@ -15,9 +15,9 @@ yourCheckInTime.setHours(targetTime.hour, targetTime.minute, targetTime.second, 
 // This function, when invoked, will check into your flight at a point in time. Intended to be used with a scheduler such as cron or TamperMonkey
 function checkInFlight(confNbr, firstName, lastName, checkInTime) {
     document.addEventListener('DOMContentLoaded', function() {
-        // Time check
-        const currentTime = new Date();
+        const currentTime = new Date(); // Time check
         const timeUntilCheckIn = checkInTime - currentTime;
+
         if (timeUntilCheckIn > 0) {
             console.log(`Waiting ${timeUntilCheckIn} ms until the target time...`);
             setTimeout(() => {
@@ -35,6 +35,8 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
             const firstNameInput = document.getElementById('passengerFirstName')
             const lastNameInput = document.getElementById('passengerLastName')
             console.log(confNumberInput);
+            console.log(firstNameInput);
+            console.log(lastNameInput);
             const submitButton = document.getElementById('form-mixin--submit-button');
             
             // Fill in the form fields
@@ -43,6 +45,7 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
             lastNameInput.value = lastName;
             
             // Recheck to see if appropriate values have been filled in
+            console.log('Checking for autofilled values:');
             console.log(confNumberInput);
             console.log(firstNameInput);
             console.log(lastNameInput);
