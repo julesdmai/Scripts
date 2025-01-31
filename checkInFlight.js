@@ -34,10 +34,11 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
             const confNumberInput = document.getElementById('confirmationNumber')
             const firstNameInput = document.getElementById('passengerFirstName')
             const lastNameInput = document.getElementById('passengerLastName')
-            console.log(confNumberInput);
-            console.log(firstNameInput);
-            console.log(lastNameInput);
+            console.log('before value change: ', confNumberInput);
+            console.log('before value change: ', firstNameInput);
+            console.log('before value change: ', lastNameInput);
             const submitButton = document.getElementById('form-mixin--submit-button');
+            console.log(submitButton);
             
             // Fill in the form fields
             confNumberInput.value = confNbr;
@@ -46,9 +47,9 @@ function checkInFlight(confNbr, firstName, lastName, checkInTime) {
             
             // Recheck to see if appropriate values have been filled in
             console.log('Checking for autofilled values:');
-            console.log(confNumberInput);
-            console.log(firstNameInput);
-            console.log(lastNameInput);
+            console.log('after value change: ', confNumberInput);
+            console.log('after value change: ', firstNameInput);
+            console.log('after value change: ', lastNameInput);
 
             // submitButton.click();
         }
