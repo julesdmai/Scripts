@@ -10,10 +10,17 @@ The purpose of this script is to check if the JPEG has been deleted, then go ahe
 */
 
 // Libraries
-
+const fs = require('fs');
+const path = require('path');
 
 // User input parameters
-
+const directoryPath = '';
 
 // Main function
-
+function syncJpegDeletes(directoryPath) {
+    const files = fs.readdirSync(directoryPath);
+    console.log(`Checking ${files.length} files...`)
+    console.log(files);
+    return;
+}
+syncJpegDeletes(directoryPath);
