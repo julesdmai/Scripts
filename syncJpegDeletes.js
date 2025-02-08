@@ -28,7 +28,9 @@ function syncJpegDeletes(directoryPath) {
             .filter(file => file.slice(-3).toLowerCase() === 'jpg')
             .map(file => file.slice(0, -4))
     )
-    console.log(`JPEGs found: ${jpegFiles.size}`)
+    const numberOfJpegs = jpegFiles.size;
+    console.log(`JPEGs found: ${numberOfJpegs}`)
+    console.log(`There should be <${numberOfJpegs * 2}> files`);
 
     // Loop through RAW files and delete the ones without matching JPEGs
     let deleteCounter = 0;
