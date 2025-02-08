@@ -20,7 +20,7 @@ const directoryPath = '';
 function syncJpegDeletes(directoryPath) {
     const files = fs.readdirSync(directoryPath)
         .filter(file => !file.startsWith('.')); // Filter out hidden files such as .DS_Store
-    console.log(`Checking ${files.length} files...`)
+    console.log(`Files found: ${files.length}`)
 
     // Loop through JPEG files in the directory and cache the names
     const jpegFiles = new Set(
