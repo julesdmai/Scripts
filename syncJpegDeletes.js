@@ -18,9 +18,32 @@ const directoryPath = '';
 
 // Main function
 function syncJpegDeletes(directoryPath) {
-    const files = fs.readdirSync(directoryPath);
+    const files = fs.readdirSync(directoryPath)
+        .filter(file => !file.startsWith('.')); // Filter out hidden files such as .DS_Store
     console.log(`Checking ${files.length} files...`)
-    console.log(files);
+
+    // Loop through JPEG files in the directory and cache the names
+    const jpegFiles = new Set(
+        files
+            .filter(file => file.slice(-3).toLowerCase() === 'jpg')
+            .map(file => file.slice(0, -4))
+    )
+    console.log(`JPEGs found: ${jpegFiles.size}`)
+
+    // Loop through RAW files and delete the ones without matching JPEGs
+    let deleteCounter = 0;
+    files.forEach(file => {
+        if (file.slice(-3).toLowerCase() === 'raf') {
+            const rawFileName = file.slice(0, -4);
+
+            if (!jpegFiles.has(rawFileName)) {
+                fs.unlinkSync(path.join(directoryPath, file));
+                deleteCounter++;
+            }
+        }
+    })
+    console.log(`Number of RAW files deleted: ${deleteCounter}`);
+
     return;
 }
 syncJpegDeletes(directoryPath);
