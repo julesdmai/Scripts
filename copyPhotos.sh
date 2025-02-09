@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# The purpose of this script is to copy photos from source folder to destination folder on a code level without having to update the UI saving time
 
 # IMPORTANT - IMPORTANT - IMPORTANT: User must input the path to their source and destination folders
-# IMPORTANT - IMPORTANT - IMPORTANT: Need the trailing "/"
+# IMPORTANT - IMPORTANT - IMPORTANT: The trailing "/" is important - each of your own paths should have a trailing backslash "/"
 SOURCE="/"
 DESTINATION="/"
 
