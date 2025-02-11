@@ -13,19 +13,20 @@ The purpose of this script is to check if the JPEG has been deleted, then go ahe
 const fs = require('fs');
 const path = require('path');
 
-// IMPORTANT - IMPORTANT - IMPORTANT: User must input the route to the folder that this script will target
-const directoryPath = '';
-// *How do I find the route? Read below
 
 // IMPORTANT - IMPORTANT - IMPORTANT: User must set this value to true for the script to run fully and delete the items
 const RUN_IN_PROD_MODE = false;
+
+// IMPORTANT - IMPORTANT - IMPORTANT: User must input the route to the folder that this script will target
+const directoryPath = '';
+// *How do I find the route? Read below
 
 // Main function
 function syncJpegDeletes(directoryPath, isInProdMode) {
     console.log(`Checking directory: ${directoryPath}`);
     isInProdMode
-        ? console.log('Running in Prod Mode: Files will be deleted')
-        : console.log(`Dry Run: Files will not be deleted`);
+        ? console.log('Running in Prod Mode: Files <will> be deleted')
+        : console.log(`Dry Run: Files <will not> be deleted`);
 
     // Check if the directory exists
     if (!fs.existsSync(directoryPath)) {
@@ -36,8 +37,8 @@ function syncJpegDeletes(directoryPath, isInProdMode) {
 
     // Connect to directory path
     const files = fs.readdirSync(directoryPath)
-    .filter(file => !file.startsWith('.') && file !== 'CaptureOne'); // Filter out hidden files such as .DS_Store and Folder "CaptureOne"
-    console.log(`Files found: ${files.length}`)
+    .filter(file => !file.startsWith('.') && file !== 'CaptureOne'); // Filter out non-image files
+    console.log(`Total number of files found: ${files.length}`)
 
     // Check if there are files in this directory
     if (files.length === 0) {
