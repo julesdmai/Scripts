@@ -2,15 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 // User must set these paths
-const jpegDirectory = ''; // Directory containing culled JPEGs
-const rawSourceDirectory = ''; // Directory containing all RAW files
-const rawDestinationDirectory = ''; // Directory where matching RAWs should be moved
+const jpegDirectory = '/';
+const rawSourceDirectory = '/';
+const rawDestinationDirectory = jpegDirectory;
 
 // Set to true for actual file moves, false for dry run
 const PRODUCTION_MODE = false;
-
-// Allowed RAW file extensions (update if using a different format)
-const RAW_EXTENSIONS = new Set(['RAF']);
 
 function extractMatchingRaws(jpegDir, rawSrcDir, rawDestDir, isProdMode) {
     console.log(`Scanning JPEG directory: ${jpegDir}`);
@@ -52,13 +49,11 @@ function extractMatchingRaws(jpegDir, rawSrcDir, rawDestDir, isProdMode) {
     const rawFiles = fs.readdirSync(rawSrcDir);
 
     rawFiles.forEach(file => {
-        const ext = file.split('.').pop().toLowerCase();
-        if (!RAW_EXTENSIONS.has(ext)) return; // This file is not a RAW file
+        if (file.slice(-3).toUpperCase() !== 'RAF') return;
 
         const rawFileName = path.parse(file).name;
-        if (!jpegFiles.has(rawFileName)) return; // This matching JPG did not survive culling
+        if (!jpegFiles.has(rawFileName)) return;
 
-        // Checks passed, moving file
         if (isProdMode) {
             try {
                 fs.renameSync(
