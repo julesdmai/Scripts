@@ -73,7 +73,7 @@ function extractMatchingRaws(jpegDir, rawSrcDir, rawDestDir, isProdMode) {
     if (isProdMode) {
         console.log(`RAW files successfully moved: ${movedCounter}`);
         console.log(`Failed to move files: ${failedCounter}`);
-    } else if (!isProdMode) {
+    } else if (isProdMode === false) {
         console.log(`[Dry Run] RAW files that would have been moved: ${movedCounter}`);
     }
 }
