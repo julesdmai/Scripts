@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Human-Like Scrolling with Top Delay
+// @name         Human-Like Scrolling with Top Reset and Delay
 // @namespace    http://tampermonkey.net/
-// @version      1.8
-// @description  Rapidly scrolls down in steps, jumps to the top, waits 25-28s, refreshes, and repeats.
+// @version      2.0
+// @description  Rapidly scrolls down in steps, jumps to 20% from the top, waits 15-18s, resets to top on refresh, and repeats.
 // @author       You
 // @match        *://*/*
 // @grant        none
@@ -14,8 +14,8 @@
     // Set your target website URL here (leave empty to work on any page)
     const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
 
-    function getRandomDelay(min = 25000, max = 28000) {
-        return Math.floor(Math.random() * (max - min + 1)) + min; // Random delay between 25-28s
+    function getRandomDelay(min = 15000, max = 18000) {
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Random delay between 15-18s
     }
 
     function rapidScroll(callback) {
@@ -48,12 +48,13 @@
 
                 requestAnimationFrame(animateScroll);
             } else {
-                // After reaching the bottom, jump to the top first
-                window.scrollTo(0, 0);
-                
-                // Wait a bit before executing the callback (random delay)
+                // After reaching the bottom, jump to 20% down from the top
+                let jumpPosition = totalHeight * 0.20; // 20% of total scroll height
+                window.scrollTo(0, jumpPosition);
+
+                // Wait before refreshing
                 let delay = getRandomDelay();
-                console.log(`Jumped to top. Waiting for ${delay / 1000} seconds before refresh.`);
+                console.log(`Jumped to 20% down (${jumpPosition}px). Waiting for ${delay / 1000} seconds before refresh.`);
                 
                 setTimeout(callback, delay); // Wait before refreshing
             }
@@ -64,12 +65,17 @@
 
     function startScrollCycle() {
         rapidScroll(() => {
-            setTimeout(() => location.reload(), 1000); // Refresh 1s after waiting at the top
+            setTimeout(() => location.reload(), 1000); // Refresh 1s after waiting at the 20% position
         });
     }
 
+    function ensureStartAtTop() {
+        window.scrollTo(0, 0); // Force reset to the top
+        console.log("Resetting to top on page load.");
+    }
+
     // Ensure the page starts at the top after refresh
-    window.scrollTo(0, 0);
+    ensureStartAtTop();
 
     // Only run on the specified target URL (if set)
     if (!TARGET_URL || window.location.href.includes(TARGET_URL)) {
