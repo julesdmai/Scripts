@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Human-Like Scrolling with Random Pause
+// @name         Human-Like Scrolling with Top Delay
 // @namespace    http://tampermonkey.net/
-// @version      1.6
-// @description  Rapidly scrolls down in steps, waits randomly between 5-15s, jumps to the top, refreshes, and repeats.
+// @version      1.7
+// @description  Rapidly scrolls down in steps, jumps to the top, waits 25-28s, refreshes, and repeats.
 // @author       You
 // @match        *://*/*
 // @grant        none
@@ -12,10 +12,10 @@
     'use strict';
 
     // Set your target website URL here (leave empty to work on any page)
-    const TARGET_URL = "https://example.com"; // Change to your desired website or leave empty for all
+    const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
 
-    function getRandomDelay(min = 5000, max = 15000) {
-        return Math.floor(Math.random() * (max - min + 1)) + min; // Random delay between 5s and 15s
+    function getRandomDelay(min = 25000, max = 28000) {
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Random delay between 25-28s
     }
 
     function rapidScroll(callback) {
@@ -48,27 +48,4 @@
 
                 requestAnimationFrame(animateScroll);
             } else if (callback) {
-                let delay = getRandomDelay();
-                console.log(`Waiting for ${delay / 1000} seconds before refresh.`);
-                setTimeout(callback, delay); // Wait a random time before refreshing
-            }
-        }
-
-        step();
-    }
-
-    function startScrollCycle() {
-        rapidScroll(() => {
-            window.scrollTo(0, 0); // Instantly jump to the top
-            setTimeout(() => location.reload(), 1000); // Refresh 1s after jumping to the top
-        });
-    }
-
-    // Ensure the page starts at the top after refresh
-    window.scrollTo(0, 0);
-
-    // Only run on the specified target URL (if set)
-    if (!TARGET_URL || window.location.href.includes(TARGET_URL)) {
-        setTimeout(startScrollCycle, 1000); // Start 1 second after page load
-    }
-})();
+                window.scrollTo(0, 0); // Instantly jump to
