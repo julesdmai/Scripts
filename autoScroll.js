@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Auto Scroll and Refresh
+// @name         Auto Scroll and Refresh (10s Scroll, 30s Delay)
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Automatically scrolls from top to bottom over 5 seconds, then refreshes the page and repeats.
+// @version      1.2
+// @description  Automatically scrolls from top to bottom over 10 seconds, then waits 30 seconds before refreshing and resetting to the top.
 // @author       You
 // @match        *://*/*
 // @grant        none
@@ -12,10 +12,10 @@
     'use strict';
 
     // Set your target website URL here (leave empty to work on any page)
-    const TARGET_URL = "https://www.newegg.com/p/pl?N=100007709%20601469156%204021%204022&Order=1"; // Change this to your desired website or leave it empty for all
+    const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
 
-    function smoothScroll(duration = 5000) {
-        let start = window.scrollY || window.pageYOffset;
+    function smoothScroll(duration = 10000) { // 10 seconds scroll time
+        let start = 0;
         let end = document.documentElement.scrollHeight - window.innerHeight;
         let startTime = performance.now();
 
@@ -28,12 +28,17 @@
             if (progress < 1) {
                 requestAnimationFrame(step);
             } else {
-                setTimeout(() => location.reload(), 1000); // Refresh 1s after reaching the bottom
+                setTimeout(() => {
+                    location.reload(); // Refresh after 30s delay
+                }, 30000); // 30-second delay before refreshing
             }
         }
 
         requestAnimationFrame(step);
     }
+
+    // Ensure the page starts at the top after refresh
+    window.scrollTo(0, 0);
 
     // Only run on the specified target URL (if set)
     if (!TARGET_URL || window.location.href.includes(TARGET_URL)) {
