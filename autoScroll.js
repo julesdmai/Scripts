@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Human-Like Scrolling with Top Delay
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1.8
 // @description  Rapidly scrolls down in steps, jumps to the top, waits 25-28s, refreshes, and repeats.
 // @author       You
 // @match        *://*/*
@@ -47,5 +47,32 @@
                 }
 
                 requestAnimationFrame(animateScroll);
-            } else if (callback) {
-                window.scrollTo(0, 0); // Instantly jump to
+            } else {
+                // After reaching the bottom, jump to the top first
+                window.scrollTo(0, 0);
+                
+                // Wait a bit before executing the callback (random delay)
+                let delay = getRandomDelay();
+                console.log(`Jumped to top. Waiting for ${delay / 1000} seconds before refresh.`);
+                
+                setTimeout(callback, delay); // Wait before refreshing
+            }
+        }
+
+        step();
+    }
+
+    function startScrollCycle() {
+        rapidScroll(() => {
+            setTimeout(() => location.reload(), 1000); // Refresh 1s after waiting at the top
+        });
+    }
+
+    // Ensure the page starts at the top after refresh
+    window.scrollTo(0, 0);
+
+    // Only run on the specified target URL (if set)
+    if (!TARGET_URL || window.location.href.includes(TARGET_URL)) {
+        setTimeout(startScrollCycle, 1000); // Start 1 second after page load
+    }
+})();
