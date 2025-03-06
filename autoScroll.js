@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Rapid Human-Like Scrolling
+// @name         Human-Like Scrolling with Random Pause
 // @namespace    http://tampermonkey.net/
-// @version      1.5
-// @description  Mimics human scrolling by rapidly scrolling in steps instead of smooth gliding. Scrolls down, pauses, scrolls up, then refreshes.
+// @version      1.6
+// @description  Rapidly scrolls down in steps, waits randomly between 5-15s, jumps to the top, refreshes, and repeats.
 // @author       You
 // @match        *://*/*
 // @grant        none
@@ -12,9 +12,13 @@
     'use strict';
 
     // Set your target website URL here (leave empty to work on any page)
-    const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
+    const TARGET_URL = "https://example.com"; // Change to your desired website or leave empty for all
 
-    function rapidScroll(direction, callback) {
+    function getRandomDelay(min = 5000, max = 15000) {
+        return Math.floor(Math.random() * (max - min + 1)) + min; // Random delay between 5s and 15s
+    }
+
+    function rapidScroll(callback) {
         let totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         let scrollAmount = totalHeight * 0.10; // 10% of total scrollable height
         let steps = Math.ceil(totalHeight / scrollAmount);
@@ -23,9 +27,7 @@
         function step() {
             if (currentStep < steps) {
                 let start = window.scrollY;
-                let end = direction === "down" 
-                    ? Math.min(start + scrollAmount, totalHeight)
-                    : Math.max(start - scrollAmount, 0);
+                let end = Math.min(start + scrollAmount, totalHeight);
                 let duration = 200; // 200ms rapid scroll
 
                 let startTime = performance.now();
@@ -46,7 +48,9 @@
 
                 requestAnimationFrame(animateScroll);
             } else if (callback) {
-                setTimeout(callback, 5000); // Wait 5 seconds before next action
+                let delay = getRandomDelay();
+                console.log(`Waiting for ${delay / 1000} seconds before refresh.`);
+                setTimeout(callback, delay); // Wait a random time before refreshing
             }
         }
 
@@ -54,10 +58,9 @@
     }
 
     function startScrollCycle() {
-        rapidScroll("down", () => {  // Scroll down in rapid steps
-            rapidScroll("up", () => { // Scroll up in rapid steps
-                setTimeout(() => location.reload(), 5000); // Wait 5s, then refresh
-            });
+        rapidScroll(() => {
+            window.scrollTo(0, 0); // Instantly jump to the top
+            setTimeout(() => location.reload(), 1000); // Refresh 1s after jumping to the top
         });
     }
 
