@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Human-Like Scrolling with Pause
+// @name         Rapid Human-Like Scrolling
 // @namespace    http://tampermonkey.net/
-// @version      1.4
-// @description  Mimics human scrolling by scrolling 10% of the page, pausing, then continuing. Scrolls down, pauses, scrolls up, then refreshes.
+// @version      1.5
+// @description  Mimics human scrolling by rapidly scrolling in steps instead of smooth gliding. Scrolls down, pauses, scrolls up, then refreshes.
 // @author       You
 // @match        *://*/*
 // @grant        none
@@ -12,9 +12,9 @@
     'use strict';
 
     // Set your target website URL here (leave empty to work on any page)
-    const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
+    const TARGET_URL = "https://www.newegg.com/p/pl?N=100007709%20601469156%204021%204022&Order=1"; // Change this to your desired website or leave empty for all
 
-    function staggeredScroll(direction, callback) {
+    function rapidScroll(direction, callback) {
         let totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         let scrollAmount = totalHeight * 0.10; // 10% of total scrollable height
         let steps = Math.ceil(totalHeight / scrollAmount);
@@ -22,18 +22,31 @@
 
         function step() {
             if (currentStep < steps) {
-                let newPosition = direction === "down" 
-                    ? window.scrollY + scrollAmount
-                    : window.scrollY - scrollAmount;
+                let start = window.scrollY;
+                let end = direction === "down"
+                    ? Math.min(start + scrollAmount, totalHeight)
+                    : Math.max(start - scrollAmount, 0);
+                let duration = 200; // 200ms rapid scroll
 
-                window.scrollTo(0, newPosition);
-                currentStep++;
+                let startTime = performance.now();
 
-                if (currentStep < steps) {
-                    setTimeout(step, 1000); // Pause for 1 second between jumps
-                } else if (callback) {
-                    setTimeout(callback, 5000); // Wait 5 seconds before next action
+                function animateScroll(currentTime) {
+                    let elapsed = currentTime - startTime;
+                    let progress = Math.min(elapsed / duration, 1);
+                    let newPosition = start + (end - start) * progress;
+                    window.scrollTo(0, newPosition);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animateScroll);
+                    } else {
+                        currentStep++;
+                        setTimeout(step, 800); // 800ms pause before next jump
+                    }
                 }
+
+                requestAnimationFrame(animateScroll);
+            } else if (callback) {
+                setTimeout(callback, 5000); // Wait 5 seconds before next action
             }
         }
 
@@ -41,8 +54,8 @@
     }
 
     function startScrollCycle() {
-        staggeredScroll("down", () => {  // Scroll down in steps
-            staggeredScroll("up", () => { // Scroll up in steps
+        rapidScroll("down", () => {  // Scroll down in rapid steps
+            rapidScroll("up", () => { // Scroll up in rapid steps
                 setTimeout(() => location.reload(), 5000); // Wait 5s, then refresh
             });
         });
