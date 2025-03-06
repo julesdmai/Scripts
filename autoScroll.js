@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Auto Scroll and Refresh (10s Scroll, 30s Delay)
+// @name         Human-Like Scrolling with Pause
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Automatically scrolls from top to bottom over 10 seconds, then waits 30 seconds before refreshing and resetting to the top.
+// @version      1.4
+// @description  Mimics human scrolling by scrolling 10% of the page, pausing, then continuing. Scrolls down, pauses, scrolls up, then refreshes.
 // @author       You
 // @match        *://*/*
 // @grant        none
@@ -14,27 +14,38 @@
     // Set your target website URL here (leave empty to work on any page)
     const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
 
-    function smoothScroll(duration = 10000) { // 10 seconds scroll time
-        let start = 0;
-        let end = document.documentElement.scrollHeight - window.innerHeight;
-        let startTime = performance.now();
+    function staggeredScroll(direction, callback) {
+        let totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        let scrollAmount = totalHeight * 0.10; // 10% of total scrollable height
+        let steps = Math.ceil(totalHeight / scrollAmount);
+        let currentStep = 0;
 
-        function step(currentTime) {
-            let elapsedTime = currentTime - startTime;
-            let progress = Math.min(elapsedTime / duration, 1);
-            let position = start + (end - start) * progress;
-            window.scrollTo(0, position);
+        function step() {
+            if (currentStep < steps) {
+                let newPosition = direction === "down" 
+                    ? window.scrollY + scrollAmount
+                    : window.scrollY - scrollAmount;
 
-            if (progress < 1) {
-                requestAnimationFrame(step);
-            } else {
-                setTimeout(() => {
-                    location.reload(); // Refresh after 30s delay
-                }, 30000); // 30-second delay before refreshing
+                window.scrollTo(0, newPosition);
+                currentStep++;
+
+                if (currentStep < steps) {
+                    setTimeout(step, 1000); // Pause for 1 second between jumps
+                } else if (callback) {
+                    setTimeout(callback, 5000); // Wait 5 seconds before next action
+                }
             }
         }
 
-        requestAnimationFrame(step);
+        step();
+    }
+
+    function startScrollCycle() {
+        staggeredScroll("down", () => {  // Scroll down in steps
+            staggeredScroll("up", () => { // Scroll up in steps
+                setTimeout(() => location.reload(), 5000); // Wait 5s, then refresh
+            });
+        });
     }
 
     // Ensure the page starts at the top after refresh
@@ -42,6 +53,6 @@
 
     // Only run on the specified target URL (if set)
     if (!TARGET_URL || window.location.href.includes(TARGET_URL)) {
-        setTimeout(smoothScroll, 1000); // Wait 1 second before starting the scroll
+        setTimeout(startScrollCycle, 1000); // Start 1 second after page load
     }
 })();
