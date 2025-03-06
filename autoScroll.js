@@ -12,7 +12,7 @@
     'use strict';
 
     // Set your target website URL here (leave empty to work on any page)
-    const TARGET_URL = "https://www.newegg.com/p/pl?N=100007709%20601469156%204021%204022&Order=1"; // Change this to your desired website or leave empty for all
+    const TARGET_URL = "https://example.com"; // Change this to your desired website or leave empty for all
 
     function rapidScroll(direction, callback) {
         let totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -23,7 +23,7 @@
         function step() {
             if (currentStep < steps) {
                 let start = window.scrollY;
-                let end = direction === "down"
+                let end = direction === "down" 
                     ? Math.min(start + scrollAmount, totalHeight)
                     : Math.max(start - scrollAmount, 0);
                 let duration = 200; // 200ms rapid scroll
