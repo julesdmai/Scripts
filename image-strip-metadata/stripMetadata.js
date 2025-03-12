@@ -13,28 +13,24 @@ const getCurrentDateTime = () => {
   return `${date}-${time}`;
 };
 
-function stripMetadata(inputPath) {
-  // Check
-  if (!fs.existsSync(inputPath)) {
-    console.error("Input file does not exist: ", inputPath);
-    return;
+async function stripMetadata(inputPath) {
+  try {
+    // Check
+    if (!fs.existsSync(inputPath)) {
+      console.error("Input file does not exist: ", inputPath);
+      return;
+    }
+
+    // Generates output file name and path from inputPath
+    const directory = path.dirname(inputPath);
+    const outputName = "CL" + getCurrentDateTime() + ".jpg";
+    const outputPath = path.join(directory, outputName);
+
+    // Process the image: remove the metadata and save it with a new name
+    await sharp(inputPath).withMetadata({ exif: false }).toFile(outputPath);
+    console.log(`Metadata has been stripped, saved file as ${outputName}`);
+  } catch (err) {
+    console.error("Error processing image: ", err);
   }
-
-  // Generates output file name and path from inputPath
-  const directory = path.dirname(inputPath);
-  const outputName = "CL" + getCurrentDateTime() + ".jpg";
-  const outputPath = path.join(directory, outputName);
-
-  // Process the image: remove the metadata and save it with a new name
-  sharp(inputPath)
-    .withMetadata({ exif: false })
-    .toFile(outputPath, (err) => {
-      if (err) {
-        console.error("Error processing image: ", err);
-      }
-      console.log("Image processed successfully");
-      return outputName;
-    });
 }
-const newName = stripMetadata(inputPath);
-console.log(`Metadata has been stripped from file saved as ${newName}`);
+stripMetadata(inputPath);
