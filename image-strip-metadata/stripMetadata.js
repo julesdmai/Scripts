@@ -5,9 +5,13 @@ const path = require ('path');
 // Point at file paths
 const inputPath = '';
 
-// Helper function to get current date
-const getTodaysDate = () => new Date().toISOString().slice(0, 10);
-const todaysDate = getTodaysDate();
+// Helper function to get current date and time in YYYYMMDD-HHMMSS
+const getCurrentDateTime = () => {
+    const now = new Date();
+    const date = now.toISOString().slice(0,10).replace(/-/g, '');
+    const time = now.toTimeString().slice(0,10).replace(/:/g, '');
+    return `${date}-${time}`;
+}
 
 function stripMetadata(inputPath, outputName) {
     // Check
