@@ -9,7 +9,7 @@ const inputPath = "";
 const getCurrentDateTime = () => {
   const now = new Date();
   const date = now.toISOString().slice(0, 10).replace(/-/g, "");
-  const time = now.toTimeString().slice(0, 10).replace(/:/g, "");
+  const time = now.toTimeString().slice(0, 8).replace(/:/g, "");
   return `${date}-${time}`;
 };
 
@@ -28,12 +28,13 @@ function stripMetadata(inputPath) {
   // Process the image: remove the metadata and save it with a new name
   sharp(inputPath)
     .withMetadata({ exif: false })
-    .toFile(outputName, (err) => {
+    .toFile(outputPath, (err) => {
       if (err) {
         console.error("Error processing image: ", err);
       }
       console.log("Image processed successfully");
+      return outputName;
     });
 }
-stripMetadata(inputPath);
-console.log(`Metadata has been stripped from file saved as ${outputName}`);
+const newName = stripMetadata(inputPath);
+console.log(`Metadata has been stripped from file saved as ${newName}`);
