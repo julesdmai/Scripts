@@ -23,11 +23,11 @@ async function stripMetadata(inputPath) {
 
     // Generates output file name and path from inputPath
     const directory = path.dirname(inputPath);
-    const outputName = "CL" + getCurrentDateTime() + ".jpg";
+    const outputName = "CL" + getCurrentDateTime() + ".JPG";
     const outputPath = path.join(directory, outputName);
 
     // Process the image: remove the metadata and save it with a new name
-    await sharp(inputPath).withMetadata({ exif: false }).toFile(outputPath);
+    await sharp(inputPath).toFile(outputPath);
     console.log(`Metadata has been stripped, saved file as ${outputName}`);
   } catch (err) {
     console.error("Error processing image: ", err);
