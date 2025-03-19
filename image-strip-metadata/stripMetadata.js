@@ -2,7 +2,7 @@ const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
 
-// Point at file paths
+// Point at file path
 const inputPath = "";
 
 // Helper function to get current date and time in YYYYMMDD-HHMMSS
@@ -21,12 +21,12 @@ async function stripMetadata(inputPath) {
       return;
     }
 
-    // Generates output file name and path from inputPath
+    // Generates output file name and path based off of inputPath
     const directory = path.dirname(inputPath);
     const outputName = "CL" + getCurrentDateTime() + ".JPG";
     const outputPath = path.join(directory, outputName);
 
-    // Process the image: remove the metadata and save it with a new name
+    // Process the image: remove the metadata and save as timestamp name
     await sharp(inputPath).toFile(outputPath);
     console.log(`Metadata has been stripped, saved file as ${outputName}`);
   } catch (err) {
