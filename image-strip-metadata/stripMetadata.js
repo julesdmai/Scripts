@@ -5,7 +5,7 @@ const path = require("path");
 // Point at file path
 const inputPath = "";
 
-// Helper function to get current date and time in YYYYMMDD-HHMMSS
+// Helper function to get current date and time in 'YYYYMMDD-HHMMSS' format
 const getCurrentDateTime = () => {
   const now = new Date();
   const date = now.toISOString().slice(0, 10).replace(/-/g, "");
@@ -15,7 +15,6 @@ const getCurrentDateTime = () => {
 
 async function stripMetadata(inputPath) {
   try {
-    // Check
     if (!fs.existsSync(inputPath)) {
       console.error("Input file does not exist: ", inputPath);
       return;
@@ -26,7 +25,7 @@ async function stripMetadata(inputPath) {
     const outputName = "CL" + getCurrentDateTime() + ".JPG";
     const outputPath = path.join(directory, outputName);
 
-    // Process the image: remove the metadata and save as timestamp name
+    // Process the image: remove the metadata and save as timestamp name to output path directory
     await sharp(inputPath).toFile(outputPath);
     console.log(`Metadata has been stripped, saved file as ${outputName}`);
   } catch (err) {
