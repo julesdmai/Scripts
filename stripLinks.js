@@ -1,6 +1,6 @@
 // Function to strip links from input text
 
-console.log("'stripLinks.js' running");
+console.log("----'stripLinks.js' running...----");
 
 // Change input's value to your user-input text
 const dummyText = `
@@ -16,13 +16,16 @@ const inputText = "" || dummyText;
 
 // This function removes all links from your input text
 function stripLinks(text) {
+    console.log('text: ', text);
     // Tokenize by lines
     // Loop through lines
         // Mutate string
     // Rejoin with line breaks
     // Return
+    return 'outputText';
 }
 const textWithoutLinks = stripLinks(inputText);
 console.log("Text without links: ", textWithoutLinks);
 
-console.log("'stripLinks.js' finished executing");
+
+console.log("----'stripLinks.js' finished executing----");
