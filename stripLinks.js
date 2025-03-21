@@ -15,7 +15,13 @@ Setup: https://bit.ly/3H117uA
 const inputText = "" || dummyText;
 
 // This function removes all links from your input text
-function stripLinks(text) {}
+function stripLinks(text) {
+    // Tokenize by lines
+    // Loop through lines
+        // Mutate string
+    // Rejoin with line breaks
+    // Return
+}
 const textWithoutLinks = stripLinks(inputText);
 console.log("Text without links: ", textWithoutLinks);
 
