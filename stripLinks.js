@@ -14,18 +14,26 @@ Setup: https://bit.ly/3H117uA
 `;
 const inputText = "" || dummyText;
 
-// This function removes all links from your input text
 function stripLinks(text) {
-    console.log('text: ', text);
-    // Tokenize by lines
-    // Loop through lines
-        // Mutate string
-    // Rejoin with line breaks
-    // Return
-    return 'outputText';
+  // Tokenize by lines
+  const tokenizedLines = text.split("\n");
+  const lines = tokenizedLines.filter((l) => l.length > 1);
+
+  // Remove the link portion of each line
+  const linesWithoutLinks = [];
+  for (const line of lines) {
+    const component = line.split(" - https")[0];
+    const trimmedComponent = component.trim();
+    linesWithoutLinks.push(trimmedComponent);
+  }
+
+  // Rejoin with line breaks
+  const outputText = linesWithoutLinks.join("\n");
+
+  // Return
+  return outputText;
 }
 const textWithoutLinks = stripLinks(inputText);
-console.log("Text without links: ", textWithoutLinks);
-
+console.log("Text without links:", "\n", textWithoutLinks);
 
 console.log("----'stripLinks.js' finished executing----");
