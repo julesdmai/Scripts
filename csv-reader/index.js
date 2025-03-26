@@ -5,11 +5,13 @@ const parse = require("csv-parse");
 
 const target = ""; // Source to CSV file
 
-function printData(source) {
+async function printData(source) {
   const outputStr = "";
+  // Handle on target
+  // Parse and construct output
   return outputStr;
 }
-const records = printData(target);
+const records = await printData(target);
 console.log('Records: ', records);
 
 console.log('---- printData.js finished executing ----')
