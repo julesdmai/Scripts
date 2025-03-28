@@ -3,9 +3,9 @@ console.log('---- printData.js starting... ----')
 const fs = require("fs");
 const parse = require("csv-parse/sync");
 
-const target = ""; // User inputs path to CSV file
+const target = "../assets/test.csv"; // User inputs path to CSV file
 
-async function printData(source) {
+function printData(source) {
   // Handle on target
   const fileContent = fs.readFileSync(source);
 
@@ -16,7 +16,7 @@ async function printData(source) {
   });
   return records;
 }
-const outputRecords = await printData(target);
+const outputRecords = printData(target);
 console.log('Records: ', outputRecords);
 
 console.log('---- printData.js finished executing ----')
