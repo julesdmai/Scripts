@@ -14,6 +14,7 @@ function printData(source) {
     columsn: true,
     skip_empty_lines: true
   });
+  // TODO: Delete empty records
   return records;
 }
 const outputRecords = printData(target);
