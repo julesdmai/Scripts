@@ -11,7 +11,7 @@ function printData(source) {
 
   // Parse and construct output
   const records = parse.parse(fileContent, {
-    columsn: true,
+    columns: true,
     skip_empty_lines: true
   });
   // TODO: Delete empty records
