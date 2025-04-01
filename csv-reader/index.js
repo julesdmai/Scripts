@@ -14,8 +14,14 @@ function printData(source) {
     columns: true,
     skip_empty_lines: true
   });
-  // TODO: Delete empty records
-  return records;
+
+  // Filter out records where key or value is empty string ('')
+  const cleanedRecords = records.map((row) => {
+    // Convert each row's object into tuples ie. [key, value] pairs
+    // Filter out
+    // Convert filtered back into an object
+  });
+  return cleanedRecords;
 }
 const outputRecords = printData(target);
 console.log('Records: ', outputRecords);
