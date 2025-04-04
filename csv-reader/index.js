@@ -18,8 +18,14 @@ function printData(source) {
   // Filter out records where key or value is empty string ('')
   const cleanedRecords = records.map((row) => {
     // Convert each row's object into tuples ie. [key, value] pairs
-    // Filter out
+    const entries = Object.entries(row);
+
+    // Filter out entries that are empty
+    const filtered = entries.filter(([key, val]) => key !== '' && val !== '');
+    
     // Convert filtered back into an object
+    const cleanedRow = Object.fromEntries(filtered);
+    return cleanedRow;
   });
   return cleanedRecords;
 }
