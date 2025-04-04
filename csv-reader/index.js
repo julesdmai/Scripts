@@ -6,7 +6,7 @@ const parse = require("csv-parse/sync");
 const target = "../assets/test.csv"; // User inputs path to CSV file
 
 function printData(source) {
-  // Handle on target
+  // Obtain handle on target
   const fileContent = fs.readFileSync(source);
 
   // Parse and construct output
@@ -23,6 +23,7 @@ function printData(source) {
   });
   return cleanedRecords;
 }
+// Function invocation
 const outputRecords = printData(target);
 console.log('Records: ', outputRecords);
 
