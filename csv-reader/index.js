@@ -14,7 +14,7 @@ function printData(source) {
     columns: true,
     skip_empty_lines: true
   });
-  console.log('pre-filter record count: ', records.length);
+  console.log('pre-filter column count: ', Object.keys(records[0]).length);
 
   // Filter out records where key or value is empty string ('')
   const cleanedRecords = records.map((row) => {
@@ -28,7 +28,7 @@ function printData(source) {
     const cleanedRow = Object.fromEntries(filtered);
     return cleanedRow;
   });
-  console.log('post-filter record count: ', cleanedRecords.length);
+  console.log('post-filter column count: ', Object.keys(cleanedRecords[0]).length);
   return cleanedRecords;
 }
 // Function invocation
