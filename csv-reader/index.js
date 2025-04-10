@@ -1,4 +1,4 @@
-console.log('---- printData.js starting... ----')
+console.log("---- printData.js starting... ----");
 
 const fs = require("fs");
 const parse = require("csv-parse/sync");
@@ -12,9 +12,9 @@ function printData(source) {
   // Parse and construct output
   const records = parse.parse(fileContent, {
     columns: true,
-    skip_empty_lines: true
+    skip_empty_lines: true,
   });
-  console.log('pre-filter column count: ', Object.keys(records[0]).length);
+  console.log("pre-filter column count: ", Object.keys(records[0]).length);
 
   // Filter out records where key or value is empty string ('')
   const cleanedRecords = records.map((row) => {
@@ -22,17 +22,20 @@ function printData(source) {
     const entries = Object.entries(row);
 
     // Filter out entries that are empty
-    const filtered = entries.filter(([key, val]) => key !== '' && val !== '');
-    
+    const filtered = entries.filter(([key, val]) => key !== "");
+
     // Convert filtered back into an object
     const cleanedRow = Object.fromEntries(filtered);
     return cleanedRow;
   });
-  console.log('post-filter column count: ', Object.keys(cleanedRecords[0]).length);
+  console.log(
+    "post-filter column count: ",
+    Object.keys(cleanedRecords[0]).length
+  );
   return cleanedRecords;
 }
 // Function invocation
 const outputRecords = printData(target);
-console.log('Records: ', outputRecords);
+console.log("Records: ", outputRecords);
 
-console.log('---- printData.js finished executing ----')
+console.log("---- printData.js finished executing ----");
