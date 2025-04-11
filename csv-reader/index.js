@@ -9,7 +9,7 @@ function printData(source) {
   // Obtain handle on target
   const fileContent = fs.readFileSync(source);
 
-  // Parse and construct output
+  // Obtain records in array of objects with columns as keys
   const records = parse.parse(fileContent, {
     columns: true,
     skip_empty_lines: true,
