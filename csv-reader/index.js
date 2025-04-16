@@ -16,7 +16,7 @@ function printData(source) {
   });
   console.log("pre-filter column count: ", Object.keys(records[0]).length);
 
-  // Filter out records where key or value is empty string ('')
+  // Filter out records where key is empty string ('')
   const cleanedRecords = records.map((row) => {
     // Convert each row's object into tuples ie. [key, value] pairs
     const entries = Object.entries(row);
