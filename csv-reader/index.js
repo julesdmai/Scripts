@@ -20,8 +20,6 @@ function printData(source) {
   const cleanedRecords = records.map((row) => {
     // Convert each row's object into tuples ie. [key, value] pairs
     const entries = Object.entries(row);
-
-    // Filter out entries that are empty
     const filtered = entries.filter(([key, val]) => key !== "");
 
     // Convert filtered back into an object
