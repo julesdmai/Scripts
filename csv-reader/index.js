@@ -36,4 +36,6 @@ function printData(source) {
 const outputRecords = printData(target);
 console.log("Records: ", outputRecords);
 
+// TODO: Render to D3 here
+
 console.log("---- printData.js finished executing ----");
