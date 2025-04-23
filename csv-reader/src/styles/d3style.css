@@ -1,0 +1,9 @@
+.bar {
+    fill: steelblue;
+}
+.bar:hover {
+    fill: orange;
+}
+.axis-label {
+    font: 12px sans-serif;
+}

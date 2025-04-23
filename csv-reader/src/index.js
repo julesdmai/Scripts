@@ -1,3 +1,5 @@
+// require * as d3 from "d3";
+
 console.log("---- printData.js starting... ----");
 
 const fs = require("fs");
