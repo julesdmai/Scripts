@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAGA;;;;AAGA","sources":["src/styles/d3style.css"],"sourcesContent":[".bar {\n    fill: steelblue;\n}\n.bar:hover {\n    fill: orange;\n}\n.axis-label {\n    font: 12px sans-serif;\n}"],"names":[],"version":3,"file":"csv-reader.cba0e53d.css.map","sourceRoot":"/__parcel_source_root/"}
