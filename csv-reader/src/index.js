@@ -48,3 +48,5 @@ function drawBarChart(data) {
     .attr('width', x.bandwidth())
     .attr('height', d => innerHeight - y(d['Height_(cm)']));
 }
+
+console.log('D3 rendered');
