@@ -704,6 +704,7 @@ function drawBarChart(data) {
     g.append('g').call(_d3.axisBottom(x)).attr('transform', `translate(0,${innerHeight})`);
     g.selectAll('.bar').data(data).enter().append('rect').attr('class', 'bar').attr('x', (d)=>x(d.Name)).attr('y', (d)=>y(d['Height_(cm)'])).attr('width', x.bandwidth()).attr('height', (d)=>innerHeight - y(d['Height_(cm)']));
 }
+console.log('D3 rendered');
 
 },{"d3":"eyk9f"}],"eyk9f":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

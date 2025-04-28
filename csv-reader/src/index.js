@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 
-// Load and parse CSV
+// Load and parse CSV using d3's built-in method
 d3.csv('../assets/test.csv').then(data => {
   // Convert string numbers to actual numbers
   data.forEach(d => {
