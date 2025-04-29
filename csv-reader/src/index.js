@@ -1,15 +1,6 @@
 import * as d3 from 'd3';
 
-// Load and parse CSV using d3's built-in method
-d3.csv('../assets/test.csv').then(data => {
-  // Convert string numbers to actual numbers
-  data.forEach(d => {
-    d['Height_(cm)'] = +d['Height_(cm)'];
-  });
-
-  drawBarChart(data);
-});
-
+// Function to create the D3 bar chart
 function drawBarChart(data) {
   const svg = d3.select('svg');
   const width = +svg.attr('width');
@@ -48,5 +39,15 @@ function drawBarChart(data) {
     .attr('width', x.bandwidth())
     .attr('height', d => innerHeight - y(d['Height_(cm)']));
 }
+
+// Load data from CSV using d3's built-in method
+d3.csv('../assets/test.csv').then(data => {
+  data.forEach(d => {
+    d['Height_(cm)'] = +d['Height_(cm)'];
+  });
+
+  // Renders chart
+  drawBarChart(data);
+});
 
 console.log('D3 rendered');
