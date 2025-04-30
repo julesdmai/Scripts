@@ -46,7 +46,7 @@ d3.csv('../assets/test.csv').then(data => {
     d['Height_(cm)'] = +d['Height_(cm)'];
   });
 
-  // Renders chart
+  // Render chart
   drawBarChart(data);
 });
 
