@@ -50,4 +50,4 @@ d3.csv('../assets/test.csv').then(data => {
   drawBarChart(data);
 });
 
-console.log('D3 rendered');
+console.log('Finished executing drawBarChart()');
