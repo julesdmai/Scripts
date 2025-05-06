@@ -1,10 +1,9 @@
 const INPUT_START_TIME = new Date("2025-05-05T08:30:00.000Z").toISOString();
-const INPUT_END_TIME = new Date("2025-05-05T09:45:00.000Z").toISOString();
+const INPUT_END_TIME = new Date('2025-05-06T16:03:31.475Z').toISOString();
 
-function minutesElapsed(isoStartTime, isoEndTime) {
-  console.log("minutesElapsed running");
+function minutesElapsed(isoStartTime, isoEndTime = new Date().toISOString()) {
+  console.log("minutesElapsed running...");
 
-  // Code goes here
   console.log("startTime: ", isoStartTime);
   console.log("endTime:   ", isoEndTime);
 
@@ -19,4 +18,4 @@ function minutesElapsed(isoStartTime, isoEndTime) {
   console.log("calculated roundedMinutes: ", roundedMinutes);
   return roundedMinutes;
 }
-minutesElapsed(INPUT_START_TIME, INPUT_END_TIME);
+minutesElapsed(INPUT_START_TIME);
