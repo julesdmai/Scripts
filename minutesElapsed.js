@@ -15,4 +15,4 @@ function minutesElapsed(isoStartTime, isoEndTime = new Date().toISOString()) {
   console.log("---- minutesElapsed finished ----");
   return roundedMinutes;
 }
-minutesElapsed(INPUT_START_TIME);
+minutesElapsed(INPUT_START_TIME, INPUT_END_TIME);
