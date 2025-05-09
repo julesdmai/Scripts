@@ -13,31 +13,31 @@ function drawBarChart(data) {
   const g = svg.append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
-  const x = d3.scaleBand() // 
-    .domain(data.map(d => d.Name))
-    .range([0, innerWidth])
-    .padding(0.1);
+  const x = d3.scaleBand() // Create the "x" scale (band scale) - scaleBand() is used for categorical data (like names)
+    .domain(data.map(d => d.Name)) // Defines input values (all the names)
+    .range([0, innerWidth]) // Maps input domain to pixel values
+    .padding(0.1); // Adds padding between bars
 
-  const y = d3.scaleLinear()
+  const y = d3.scaleLinear() // Create the "y" scale (linear scale)
     .domain([0, d3.max(data, d => d['Height_(cm)'])])
     .nice()
-    .range([innerHeight, 0]);
+    .range([innerHeight, 0]);// Note range goes from innerHeight -> to 0 because SVG Y-coordinates increase downward
 
   g.append('g')
-    .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y)); // Adds the y-axis to the left using the "y" scale
 
   g.append('g')
-    .call(d3.axisBottom(x))
-    .attr('transform', `translate(0,${innerHeight})`);
+    .call(d3.axisBottom(x)) // Adds the x-axis to the bottom using the "x" scale
+    .attr('transform', `translate(0,${innerHeight})`); // Renders the x-axis at the bottom of the SVG
 
-  g.selectAll('.bar')
-    .data(data)
-    .enter().append('rect')
+  g.selectAll('.bar') // Data binding and rectangle creation
+    .data(data) // Binds your data to "SVG" rect elements
+    .enter().append('rect') // .enter() creates a placeholder for each new data item, .append(...) draws a rectangle for each data item
     .attr('class', 'bar')
-    .attr('x', d => x(d.Name))
-    .attr('y', d => y(d['Height_(cm)']))
-    .attr('width', x.bandwidth())
-    .attr('height', d => innerHeight - y(d['Height_(cm)']));
+    .attr('x', d => x(d.Name)) // x(...) positions the bar horizontally
+    .attr('y', d => y(d['Height_(cm)'])) // y(...) gives the top position of the bar
+    .attr('width', x.bandwidth()) // x.bandwidth() sets each bar's width
+    .attr('height', d => innerHeight - y(d['Height_(cm)'])); // height = innerHeight - y(...) makes the bar grow upward.
 }
 
 // Load data from CSV using d3's built-in method
