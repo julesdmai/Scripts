@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 
 // Function to create the D3 bar chart
 function drawBarChart(data) {
-  const svg = d3.select('svg');
+  const svg = d3.select('svg'); // Select the SVG container from the HTML DOM using D3
   const width = +svg.attr('width');
   const height = +svg.attr('height');
   const margin = { top: 20, right: 30, bottom: 30, left: 40 };
@@ -13,7 +13,7 @@ function drawBarChart(data) {
   const g = svg.append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
-  const x = d3.scaleBand()
+  const x = d3.scaleBand() // 
     .domain(data.map(d => d.Name))
     .range([0, innerWidth])
     .padding(0.1);
