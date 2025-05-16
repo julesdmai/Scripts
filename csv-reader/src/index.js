@@ -37,7 +37,7 @@ function drawBarChart(data) {
     .attr('x', d => x(d.Name)) // x(...) positions the bar horizontally
     .attr('y', d => y(d['Height_(cm)'])) // y(...) gives the top position of the bar
     .attr('width', x.bandwidth()) // x.bandwidth() sets each bar's width
-    .attr('height', d => innerHeight - y(d['Height_(cm)'])); // height = innerHeight - y(...) makes the bar grow upward.
+    .attr('height', d => innerHeight - y(d['Height_(cm)'])); // height = innerHeight - y(...) makes the bar grow downward to the x-axis (baseline)
 }
 
 // Load data from CSV using d3's built-in method
