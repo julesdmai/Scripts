@@ -1,6 +1,6 @@
 function drawSimpleBarChart(data) {
   const svg = d3.select("svg");
-  const width = +svg.attr("width");
+  const width = +svg.attr("width"); // TODO: Simplify width and height
   const height = +svg.attr("height");
 
   // Create the x scale
