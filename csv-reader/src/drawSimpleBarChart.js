@@ -14,9 +14,9 @@ function drawSimpleBarChart(data) {
   const y = d3
     .scaleLinear()
     .domain([0, d3.max(data, (d) => d["Height_(cm)"])]) // TODO: Simplify field name
-    .range([height, 0]); // Start at height
+    .range([height, 0]);
 
-  // Bind the data and draw the rectangles
+  // Bind the data and render the rectangles
   svg
     .selectAll("rect")
     .data(data)
