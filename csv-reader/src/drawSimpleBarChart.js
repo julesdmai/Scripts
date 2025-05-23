@@ -8,7 +8,7 @@ function drawSimpleBarChart(data) {
     .scaleBand()
     .domain(data.map((d) => d.Name))
     .range([0, width])
-    .padding(0.1);
+    .padding(0.2);
 
   // Create the y scale
   const y = d3
