@@ -21,7 +21,7 @@ function drawSimpleBarChart(data) {
     .selectAll("rect")
     .data(data)
     .enter()
-    .append("rect")
+    .append("rect") // Render rect for each missing per data point
     .attr("x", (d) => x(d.Name))
     .attr("y", (d) => y(d["Height_(cm)"]))
     .attr("width", x.bandwidth())
