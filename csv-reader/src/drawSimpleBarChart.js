@@ -16,7 +16,7 @@ function drawSimpleBarChart(data) {
     .domain([0, d3.max(data, (d) => d["Height_(cm)"])]) // TODO: Simplify field name
     .range([height, 0]); // SVG coordinate system
 
-  // Bind the data and render the rectangles
+  // Bind the data and render the rectangles per data point
   svg
     .selectAll("rect")
     .data(data)
