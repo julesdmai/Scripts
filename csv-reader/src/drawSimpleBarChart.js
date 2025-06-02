@@ -27,4 +27,6 @@ function drawSimpleBarChart(data) {
     .attr("width", x.bandwidth())
     .attr("height", (d) => height - y(d["Height_(cm)"]))
     .attr("fill", "steelblue");
+
+  // TODO: Add a hover
 }
