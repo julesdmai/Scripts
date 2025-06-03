@@ -1,4 +1,5 @@
 function drawSimpleBarChart(data) {
+  // TODO: Add responsiveness
   const svg = d3.select("svg");
   const width = +svg.attr("width"); // TODO: Simplify width and height
   const height = +svg.attr("height");
