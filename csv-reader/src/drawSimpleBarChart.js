@@ -30,4 +30,5 @@ function drawSimpleBarChart(data) {
     .attr("fill", "steelblue");
 
   // TODO: Add a hover tooltip on each bar displaying the data
+  // TODO: Look into Sankey diagram
 }
