@@ -31,5 +31,6 @@ function drawSimpleBarChart(data) {
 
   // TODO: Add a hover tooltip on each bar displaying the data
   // TODO: Stacked bar chart
+  // TODO: Regular to stacked bar chart animation
   // TODO: Look into Sankey diagram
 }
