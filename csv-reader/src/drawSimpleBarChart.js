@@ -30,7 +30,7 @@ function drawSimpleBarChart(data) {
     .attr("fill", "steelblue");
 
   // TODO: Add a hover tooltip on each bar displaying the data
-  // TODO: Stacked bar chart
+  // TODO: Stacked bar chart - look into shape of data
   // TODO: Regular to stacked bar chart animation
   // TODO: Look into Sankey diagram
 }
