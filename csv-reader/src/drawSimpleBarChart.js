@@ -5,14 +5,14 @@ function drawSimpleBarChart(data) {
   const height = +svg.attr("height");
 
   // Create the x-scale scaling function
-  const x = d3
+  const xScale = d3
     .scaleBand()
     .domain(data.map((d) => d.Name))
     .range([0, width])
     .padding(0.2);
 
   // Create the y-scale scaling function
-  const y = d3
+  const yScale = d3
     .scaleLinear()
     .domain([0, d3.max(data, (d) => d["Height_(cm)"])]) // TODO: Simplify field name
     .range([height, 0]); // SVG coordinate system
@@ -23,10 +23,10 @@ function drawSimpleBarChart(data) {
     .data(data)
     .enter()
     .append("rect") // Render rect for each missing per data point
-    .attr("x", (d) => x(d.Name))
-    .attr("y", (d) => y(d["Height_(cm)"]))
-    .attr("width", x.bandwidth())
-    .attr("height", (d) => height - y(d["Height_(cm)"]))
+    .attr("x", (d) => xScale(d.Name))
+    .attr("y", (d) => yScale(d["Height_(cm)"]))
+    .attr("width", xScale.bandwidth())
+    .attr("height", (d) => height - yScale(d["Height_(cm)"]))
     .attr("fill", "steelblue");
 
   // TODO: Prioritize TODOs
