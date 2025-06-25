@@ -29,7 +29,6 @@ function drawSimpleBarChart(data) {
     .attr("height", (d) => height - yScale(d["Height_(cm)"]))
     .attr("fill", "steelblue");
 
-  // TODO: Prioritize TODOs
   // TODO: Add a hover tooltip on each bar displaying the data
   // TODO: Stacked bar chart - look into shape of data
   // TODO: Regular to stacked bar chart animation
