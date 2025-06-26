@@ -29,8 +29,8 @@ function drawSimpleBarChart(data) {
     .attr("height", (d) => height - yScale(d["Height_(cm)"]))
     .attr("fill", "steelblue");
 
-  // TODO: Add a hover tooltip on each bar displaying the data
-  // TODO: Stacked bar chart - look into shape of data
-  // TODO: Regular to stacked bar chart animation
+  // TODO: Add hover tooltip
+  // TODO: Stacked bar chart
+  // TODO: Animation - Regular to stacked bar chart
   // TODO (PRIORITY): Look into Sankey diagram for NemoFin
 }
