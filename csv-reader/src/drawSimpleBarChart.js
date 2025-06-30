@@ -33,5 +33,5 @@ function drawSimpleBarChart(data) {
   // TODO: Stacked bar chart
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
-  // TODO (PRIORITY): Look into Sankey diagram for NemoFin
+  // TODO (PRIORITY): Research Sankey diagram for NemoFin
 }
