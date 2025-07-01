@@ -34,4 +34,5 @@ function drawSimpleBarChart(data) {
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
   // TODO (PRIORITY): Research Sankey diagram for NemoFin
+  // TODO: Sketch irin.io
 }
