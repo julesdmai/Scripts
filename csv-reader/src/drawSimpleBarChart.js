@@ -37,5 +37,7 @@ function drawSimpleBarChart(data) {
   // TODO (PRIORITY): Research Sankey diagram for NemoFin.io
   // TODO: Wireframe irin.io
   // TODO: Establish MVP followed by priorities
-  // TODO: Lambdas
+  // TODO: Brush up on Lambdas
+
+  
 }
