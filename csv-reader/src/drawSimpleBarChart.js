@@ -38,6 +38,7 @@ function drawSimpleBarChart(data) {
   // TODO: Wireframe irin.io
   // TODO: Establish MVP followed by priorities
   // TODO: Brush up on Lambdas
+  // TODO: Clothing tracker project
 
   // TODO: Prioritize TODOs
 }
