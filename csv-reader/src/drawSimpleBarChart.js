@@ -40,5 +40,6 @@ function drawSimpleBarChart(data) {
   // TODO: Establish MVP
   // TODO: Prioritize TODOs
 
-  // TODO: Brush up on Lambdas
+  // TODO: Research Lambdas
+  // TODO: Research API GW
 }
