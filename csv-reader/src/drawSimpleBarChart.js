@@ -37,8 +37,7 @@ function drawSimpleBarChart(data) {
   // TODO: NemoFin - Research Sankey diagram for NemoFin.io
   // TODO: Runlift - Wireframe
   // TODO: Clothing tracker project
-  // TODO: Establish MVP
-  // TODO: Prioritize TODOs
+  // TODO: Choose and establish MVP then prioritize TODOs
 
   // TODO: Research Lambdas
   // TODO: Research API GW
