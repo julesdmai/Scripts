@@ -41,4 +41,6 @@ function drawSimpleBarChart(data) {
 
   // TODO: Research Lambdas
   // TODO: Research API GW
+
+  // TODO: Wrap up Chronoglass
 }
