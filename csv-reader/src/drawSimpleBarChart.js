@@ -43,4 +43,5 @@ function drawSimpleBarChart(data) {
   // TODO: Research API GW
 
   // TODO: Wrap up Cglass - Home, About, Account, Contact
+  // TOOD: Fix Cglass Home page clock in
 }
