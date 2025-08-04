@@ -42,8 +42,6 @@ function drawSimpleBarChart(data) {
   // TODO: Research Lambdas
   // TODO: Research API GW
 
-  // TODO: Wrap up Cglass - Home, About, Account, Contact
-  // TOOD: Fix Cglass Home page clock in
-  // TODO: Extract current Main_Content into lower component (do this again after reverting)
+  // TODO: Wrap up Cglass - Account, Contact
   // TODO: Misc Cglass fixes
 }
