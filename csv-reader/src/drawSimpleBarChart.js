@@ -43,5 +43,5 @@ function drawSimpleBarChart(data) {
   // TODO: Research API GW
 
   // TODO: Wrap up Cglass pages - Account, Contact
-  // TODO: Cglass - My account skeleton, best practices dark mode, implement global variables
+  // TODO: Cglass - My account skeleton, best practices dark mode, implement global variables (cont)
 }
