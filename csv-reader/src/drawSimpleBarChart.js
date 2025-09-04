@@ -44,5 +44,5 @@ function drawSimpleBarChart(data) {
 
   // TODO: Wrap up Cglass pages - Account, Contact
   // TODO: Cglass - My account, codebase global css variables, dark mode
-  // TODO: Priority - Cglass - Comment before presentation
+  // TODO: Priority - Cglass - Comment
 }
