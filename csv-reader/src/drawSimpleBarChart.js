@@ -42,7 +42,7 @@ function drawSimpleBarChart(data) {
   // TODO: Research Lambdas
   // TODO: Research API GW
 
-  // TODO: Wrap up Cglass pages - Account, Contact
-  // TODO: Cglass - My account, codebase global css variables, dark mode
-  // TODO: Priority - Cglass - Comment
+  // TODO: Cglass - Contact us
+  // TODO: Cglass - My account - backend
+  // TODO: Cglass - History page - Modals [dark]
 }
