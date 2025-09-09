@@ -45,4 +45,5 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Contact us
   // TODO: Cglass - My account - backend
   // TODO: Cglass - History page - Modals [dark]
+  // TOOD: Cglass - Prioritize TODOs
 }
