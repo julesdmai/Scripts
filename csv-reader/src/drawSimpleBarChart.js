@@ -44,5 +44,5 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Contact us
   // TODO: Cglass - My account - backend
-  // TOOD: Cglass - History Page rework - Data Table (cont)
+  // TOOD: Cglass - History Page rework - Data Table
 }
