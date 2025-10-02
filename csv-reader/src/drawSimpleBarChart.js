@@ -43,6 +43,5 @@ function drawSimpleBarChart(data) {
   // TODO: Research API GW
 
   // TODO: Cglass - Contact us
-  // TODO: Cglass - My account - backend
-  // TOOD: Cglass - Charts Page (simplify)
+  // TODO: Cglass - My account - backend writes
 }
