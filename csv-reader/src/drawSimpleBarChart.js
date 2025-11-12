@@ -43,7 +43,7 @@ function drawSimpleBarChart(data) {
   // TODO: Research API GW
 
   // TODO: Cglass - Contact us
-  // TODO: Cglass - Recently Deleted - Frontend
+  // TODO: Cglass - Recently Deleted - Frontend (cont)
   // TODO: Cglass - Controller Refactor - getWeeklyShiftsForChart
   // TODO: Cglass - Fix Bug - Charts Page - multi day shifts (cont)
 }
