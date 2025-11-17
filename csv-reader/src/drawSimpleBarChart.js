@@ -44,6 +44,5 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Contact us - Frontend
   // TODO: Cglass - Recently Deleted - Frontend (cont)
-  // TODO: Cglass - Controller Refactor - getWeeklyShiftsForChart - logging
-  // TODO: Cglass - Fix Bug - Charts Page - multi day shifts (cont)
+  // TODO: Cglass - Controller Refactor - userController
 }
