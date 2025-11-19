@@ -44,5 +44,5 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Contact us - Frontend
   // TODO: Cglass - Recently Deleted - Frontend (cont)
-  // TODO: Cglass - Controller Refactor - userController
+  // TODO: Cglass - Controller Refactor - authController, userController
 }
