@@ -44,5 +44,4 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Contact us - Frontend
   // TODO: Cglass - Recently Deleted - Frontend (cont)
-  // TODO: Cglass - forgot password / reset password frontend refactor (cont)
 }
