@@ -33,15 +33,10 @@ function drawSimpleBarChart(data) {
   // TODO: Stacked bar chart
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
-  
-  // TODO: NemoFin - Research Sankey diagram for NemoFin.io
-  // TODO: Runlift - Wireframe
-  // TODO: Costperwear - Clothing tracker project
-  // TODO: Choose, establish MVP, design, then prioritize TODOs
 
   // TODO: Research Lambdas
   // TODO: Research API GW
 
   // TODO: Cglass - Contact us - Frontend
-  // TODO: Cglass - Recently Deleted - Frontend refactor
+  // TODO: Cglass - Groups functionality
 }
