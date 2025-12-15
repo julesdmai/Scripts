@@ -33,9 +33,6 @@ function drawSimpleBarChart(data) {
   // TODO: Stacked bar chart
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
-
-  // TODO: Research Lambdas
-  // TODO: Research API GW
   
   // TODO: Cglass - Groups functionality
 }
