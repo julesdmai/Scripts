@@ -36,4 +36,5 @@ function drawSimpleBarChart(data) {
   
   // TODO: Cglass - Groups - Leave Group, Disband Group, Kick from Group (cont)
   // TODO: Cglass - Groups - Download
+  // TODO: Cglass - Groups - Advanced Filters  
 }
