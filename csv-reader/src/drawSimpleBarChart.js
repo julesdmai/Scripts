@@ -34,7 +34,7 @@ function drawSimpleBarChart(data) {
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
 
-  // TODO: Cglass - Groups - Disband Group
+  // TODO: Cglass - Groups - Disband Group (cont)
 
   // TODO: Cglass - Groups - Admin - Kick from Group
   
