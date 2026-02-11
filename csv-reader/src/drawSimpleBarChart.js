@@ -37,6 +37,8 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Groups - Disband Group (finish)
 
   // TODO: Cglass - Groups - Admin - Kick from Group
+  // TODO: Cglass - Groups - Admin - Promote/Demote
+  // TODO: Cglass - Groups - Admin - Change Member Number
   
   // TODO: Cglass - Groups - Download
   // TODO: Cglass - Groups - Advanced Filters  
