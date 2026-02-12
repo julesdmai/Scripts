@@ -35,9 +35,9 @@ function drawSimpleBarChart(data) {
   // TODO: Animation - Regular to stacked bar chart
 
   // TODO: Cglass - Groups - Disband Group (finish)
-
-  // TODO: Cglass - Groups - Admin - Kick from Group
-  // TODO: Cglass - Groups - Admin - Promote/Demote
+  
+  // TODO: Cglass - Groups - Admin - Kick Member from Group
+  // TODO: Cglass - Groups - Admin - Promote/Demote member to admin/member
   // TODO: Cglass - Groups - Admin - Change Member Number
   
   // TODO: Cglass - Groups - Download
