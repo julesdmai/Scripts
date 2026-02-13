@@ -35,11 +35,11 @@ function drawSimpleBarChart(data) {
   // TODO: Animation - Regular to stacked bar chart
 
   // TODO: Cglass - Groups - Disband Group (finish)
-  
+
   // TODO: Cglass - Groups - Admin - Kick Member from Group
   // TODO: Cglass - Groups - Admin - Promote/Demote member to admin/member
   // TODO: Cglass - Groups - Admin - Change Member Number
   
-  // TODO: Cglass - Groups - Download
+  // TODO: Cglass - Groups - Download - Excel, CSV, JSON
   // TODO: Cglass - Groups - Advanced Filters  
 }
