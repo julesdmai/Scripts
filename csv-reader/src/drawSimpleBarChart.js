@@ -35,5 +35,5 @@ function drawSimpleBarChart(data) {
   // TODO: Animation - Regular to stacked bar chart
   
   // TODO: Cglass - Groups - Download - Excel, CSV, JSON (cont)
-  // TODO: Cglass - Groups - Advanced Filters  
+  // TODO: Cglass - Groups - Advanced Filters (cont)
 }
