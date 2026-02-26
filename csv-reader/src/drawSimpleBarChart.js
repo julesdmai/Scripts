@@ -36,4 +36,5 @@ function drawSimpleBarChart(data) {
   
   // TODO: Cglass - Groups - Server Time Control - Prep work for Adv Filters
   // TODO: Cglass - Groups - Advanced Filters
+  // TODO: Cglass - Groups - Refactor Charts
 }
