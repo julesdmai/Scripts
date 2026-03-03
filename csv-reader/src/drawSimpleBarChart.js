@@ -34,7 +34,6 @@ function drawSimpleBarChart(data) {
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
   
-  // TODO: Cglass - Groups - Advanced Filters - Review and fix PR
-  // TODO: Cglass - Charts - Refactor Charts
+  // TODO: Cglass - Charts - Refactor Charts (Fragment files)
   // TODO: Cglass - Refactor - Time-based searches - Charts Page, history page, recently deleted page, etc.
 }
