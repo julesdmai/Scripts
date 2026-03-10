@@ -29,11 +29,11 @@ function drawSimpleBarChart(data) {
     .attr("height", (d) => height - yScale(d["Height_(cm)"]))
     .attr("fill", "steelblue");
 
-  // TODO: Add hover tooltip
   // TODO: Stacked bar chart
   // TODO: Modify data set for stacked bar chart
   // TODO: Animation - Regular to stacked bar chart
   
-  // TODO: Cglass - Charts - Refactor Charts - Tidy for PR
-  // TODO: Cglass - Refactor - Time-based searches - Charts Page, history page, recently deleted page, etc.
+  // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
+  // TODO: Cglass - Refactor - Time-based searches - Charts Page - Charts Main Content
 }
+
