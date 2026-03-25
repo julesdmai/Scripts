@@ -34,7 +34,6 @@ function drawSimpleBarChart(data) {
   // TODO: Animation - Regular to stacked bar chart
   
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
-  // TODO: Cglass - Charts Cached (cont)
-  // TODO: Cglass - Charts Cached - 30d View
+  // TODO: Cglass - 30d View
 }
 
