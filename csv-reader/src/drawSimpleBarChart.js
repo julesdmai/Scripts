@@ -35,6 +35,6 @@ function drawSimpleBarChart(data) {
   
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
   // TODO: Cglass - Charts - 30d View
-  // TODO: Cglass - Charts - 30d View - Layer 2 - Layout Layer
+  // TODO: Cglass - Charts - 30d View - Layer 2 - Layout Layer (cont)
 }
 
