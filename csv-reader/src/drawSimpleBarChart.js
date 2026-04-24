@@ -37,5 +37,6 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - PR 117 - Charts - 30d View - Submit (cont)
   // TODO: Cglass - Groups - Shift Details, Unlink shift, Shared notes page, review download
   // TODO: Cglass - Home Page
+  // TODO: Cglass - Telemetry Layer
 }
 
