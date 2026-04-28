@@ -36,7 +36,6 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
   // TODO: Cglass - PR 117 - Charts - 30d View - Submit (cont)
   // TODO: Cglass - Groups - Shift Details, Unlink shift, Shared notes page, review download
-  // TODO: Cglass - Home Page
-  // TODO: Cglass - Telemetry Layer
-}
+  // TODO: Cglass - Home Page - Shift Details
+  // TODO: Cglass - Monitoring + Alerting
 
