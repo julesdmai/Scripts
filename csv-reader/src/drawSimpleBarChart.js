@@ -34,7 +34,6 @@ function drawSimpleBarChart(data) {
   // TODO: Animation - Regular to stacked bar chart
   
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
-  // TODO: Cglass - PR 117 - Charts - 30d View - Submit (cont)
   // TODO: Cglass - Groups - Shift Details, Unlink shift, Shared notes page, refactor download fields
   // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In
   // TODO: Cglass - Monitoring + Alerting
