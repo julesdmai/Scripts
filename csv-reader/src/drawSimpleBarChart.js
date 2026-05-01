@@ -35,6 +35,7 @@ function drawSimpleBarChart(data) {
   
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
   // TODO: Cglass - Groups - Shift Details, Unlink shift, Shared notes page, refactor download fields
+  // TODO: Cglass - PR 118 - Groups - Shift Details, Unlink shift, Shared notes page, refactor download fields
   // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In
   // TODO: Cglass - Monitoring + Alerting
 
