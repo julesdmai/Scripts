@@ -40,6 +40,7 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - About Page
   // TODO: Cglass - Monitoring + Alerting
 
+  // TODO: Nuvue - CICD Pipeline
   // TODO: Nuvue - Splash
   // TODO: Nuvue - About
   // TODO: Nuvue - Contact
