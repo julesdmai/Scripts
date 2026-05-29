@@ -35,10 +35,10 @@ function drawSimpleBarChart(data) {
   
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
 
-  // TODO: Cglass - OODA
   // TODO: Cglass - Groups - Bootstrap API, Cleanup, Shared notes page, Animation (cont)
   // TODO: Cglass - Groups - PR 119
   // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In, Full Screen
+  // TODO: Cglass - Home Page - Manual Entry - Disable add until start/end time fulfilled
   // TODO: Cglass - About Page
   // TODO: Cglass - Monitoring + Alerting
 
