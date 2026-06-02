@@ -46,4 +46,5 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - Splash
   // TODO: Nuvue - About
   // TODO: Nuvue - Contact
+  // TODO: Nuvue - Coming Soon
 
