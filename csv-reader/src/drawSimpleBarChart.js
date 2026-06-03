@@ -43,8 +43,6 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Monitoring + Alerting
 
   // TODO: Nuvue - CICD Pipeline (Vercel setup) (cont)
-  // TODO: Nuvue - Splash
   // TODO: Nuvue - About
   // TODO: Nuvue - Contact
-  // TODO: Nuvue - Coming Soon
 
