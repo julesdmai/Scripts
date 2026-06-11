@@ -37,7 +37,7 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Groups - Bootstrap API, Cleanup, 
   // TODO: Cglass - Groups - Bootstrap API - Frontend connection
-  // TODO: Cglass - Groups - Shared notes page
+  // TODO: Cglass - Groups - Shared notes page - Backend, Frontend
   // TODO: Cglass - Groups - Animation (cont)
   // TODO: Cglass - Groups - PR 119 - Submit
   // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In
