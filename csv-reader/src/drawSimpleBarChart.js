@@ -37,7 +37,8 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Groups - Bootstrap API, Cleanup, 
   // TODO: Cglass - Groups - Bootstrap API - Frontend connection
-  // TODO: Cglass - Groups - Shared notes page - Backend
+  // TODO: Cglass - Groups - Bootstrap API - Shared Notes GET
+  // TODO: Cglass - Groups - Shared notes page - Backend - Edit Note
   // TODO: Cglass - Groups - Shared notes page - Frontend
   // TODO: Cglass - Groups - Animation (cont)
   // TODO: Cglass - Groups - PR 119 - Submit
