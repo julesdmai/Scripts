@@ -50,4 +50,5 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - CICD Pipeline (Vercel setup) (cont)
   // TODO: Nuvue - About
   // TODO: Nuvue - Contact
+  // TODO: Nuvue - Talent / User Architecture
 
