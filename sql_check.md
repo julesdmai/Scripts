@@ -1,0 +1,1 @@
+-- CHECK (tone_brand_energy IN ('Luxury', 'Brown', 'Hazel', 'Green', 'Blue', 'Gray', 'Amber', 'Other')),
