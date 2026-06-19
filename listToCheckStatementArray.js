@@ -33,8 +33,26 @@ function listToCheckStatementArray(str, lbl) {
 // const s = listToCheckStatementArray(testStr);
 // console.log(s);
 
+// const options =
+//   "High Fashion | Commercial | Editorial | Athletic | Corporate | Streetwear | Bohemian | Classic | Edgy | Luxury | All-American | Other";
+// const label = "look_style_tags";
+// const results = listToCheckStatementArray(options, label);
+// console.log(results);
+
+// const options =
+//   "Luxury | Edgy | Corporate | Approachable | Aspirational | Youthful | Sophisticated | Other";
+// const label = "brand_tone_tags";
+// const results = listToCheckStatementArray(options, label);
+// console.log(results);
+
+// const options =
+//   "American Indian or Alaska Native | Asian | Black or African American | Native Hawaiian or Other Pacific Islander | White | Two or more races | Some other race | Prefer not to say";
+// const label = "race";
+// const results = listToCheckStatementArray(options, label);
+// console.log(results);
+
 const options =
-  "High Fashion | Commercial | Editorial | Athletic | Corporate | Streetwear | Bohemian | Classic | Edgy | Luxury | All-American | Other";
-const label = "look_style_tags";
+  "American Indian or Alaska Native | Asian | Black or African American | Native Hawaiian or Other Pacific Islander | White | Two or more races | Some other race | Prefer not to say";
+const label = "race";
 const results = listToCheckStatementArray(options, label);
 console.log(results);
