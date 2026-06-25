@@ -35,16 +35,13 @@ function drawSimpleBarChart(data) {
   
   // TODO: Cglass - Refactor - Time-based searches history page, recently deleted page, ...
 
-  // TODO: Cglass - Groups - Shared Note - Frontend
-  // TODO: Cglass - Groups - Shared Note - Backend - Edit Note
-  // TODO: Cglass - Groups - Animation (cont)
-  // TODO: Cglass - Groups - PR 119 - Submit
+  // TODO: Cglass - Splash
+
   // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In
   // TODO: Cglass - Home Page - Full Screen
   // TODO: Cglass - About Page
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - CICD Pipeline (Vercel) 
   // TODO: Nuvue - About / Contact (Paused)
   // TODO: Nuvue - Talent Gallery
   // TODO: Nuvue - Talent Submission
