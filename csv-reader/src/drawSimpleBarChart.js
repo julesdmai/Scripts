@@ -46,4 +46,4 @@ function drawSimpleBarChart(data) {
 
   // TODO: Nuvue - About / Contact (Paused)
   // TODO: Nuvue - Talent Submission
-  // TODO: Nuvue - Talent Gallery (*)
+  // TODO: Nuvue - Admin List
