@@ -45,4 +45,6 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Monitoring + Alerting
 
   // TODO: Nuvue - About / Contact (Paused)
-  // TODO: Nuvue - Talents - Admin CRUD
+  // TODO: Nuvue - Talents - Admin Create
+  // TODO: Nuvue - Talents - Admin Update
+  // TODO: Nuvue - Talents - Admin Delete
