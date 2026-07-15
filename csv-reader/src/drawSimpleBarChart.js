@@ -47,6 +47,7 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - About / Contact (Paused)
   // TODO: Nuvue - Talents - Media - Edit
   // TODO: Nuvue - Talents - Media - Frontend
+  // TODO: Nuvue - Talents - Media - Delete
 
   // TODO: Nuvue - Talents - Media - New Talent
 
