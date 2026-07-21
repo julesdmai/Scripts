@@ -46,12 +46,9 @@ function drawSimpleBarChart(data) {
 
   // TODO: Nuvue - About / Contact (Paused)
 
-  // TODO: Nuvue - Talents - Admin Talent List - Spotlight
   // TODO: Nuvue - Talents - Admin Talent List - Rows
   // TODO: Nuvue - Talents - Admin Talent List - Edit
   // TODO: Nuvue - Talents - Admin Talent List - Visibility
-  
-  // TODO: Nuvue - Public Talents - Spotlight Image
 
   // TODO: Nuvue - Talents - Admin Talent List - Thumbnail Media
 
