@@ -46,11 +46,13 @@ function drawSimpleBarChart(data) {
 
   // TODO: Nuvue - Review Talent Slug Page
   // TODO: Nuvue - Talent Slug Page - DB connection
+
   // TODO: Nuvue - Video Upload
+  // TODO: Nuvue - Video Rendering
   // TODO: Nuvue - Seed DB with profiles & media
 
 
-  // TODO: Nuvue - About / Contact (Paused)
+  // TODO: Nuvue - About / Contact (Jacob)
   // TODO: Nuvue - SEO - Talent name slug page endpoint (Paused)
   // TODO: Nuvue - Admin Talent List - Sort (Paused)
   // TODO: Nuvue - Admin Talent List - Thumbnail Media (Paused)
