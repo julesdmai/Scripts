@@ -44,12 +44,13 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
+  // TODO: Nuvue - Image Fullscreen
   // TODO: Nuvue - Review Talent Slug Page
-  // TODO: Nuvue - Talent Slug Page - DB connection
+  
+  // TODO: Nuvue - Seed DB with profiles & media
 
   // TODO: Nuvue - Video Upload
   // TODO: Nuvue - Video Rendering
-  // TODO: Nuvue - Seed DB with profiles & media
 
 
   // TODO: Nuvue - About / Contact (Jacob)
