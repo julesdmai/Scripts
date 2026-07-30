@@ -45,7 +45,6 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Monitoring + Alerting
 
   // TODO: Nuvue - Image Fullscreen
-  // TODO: Nuvue - Review Talent Slug Page
   
   // TODO: Nuvue - Seed DB with profiles & media
 
