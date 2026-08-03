@@ -44,7 +44,7 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - Talent Slug Info Section
+  // TODO: Nuvue - Talent Slug Info Section (cont)
 
   // TODO: Nuvue - Video Upload
   // TODO: Nuvue - Video Rendering
