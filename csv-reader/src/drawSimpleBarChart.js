@@ -44,7 +44,7 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - Video Upload (cont.)
+  // TODO: Nuvue - Video Upload (cont..)
   // TODO: Nuvue - Video Rendering
 
   // TODO: Nuvue - About Page
