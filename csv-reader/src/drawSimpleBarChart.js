@@ -46,6 +46,7 @@ function drawSimpleBarChart(data) {
 
   // TODO: Nuvue - About Page
   // TODO: Nuvue - Contact Page
+  // TODO: Nuvue - SEO
 
   // TODO: Nuvue - About / Contact (Jacob)
   // TODO: Nuvue - SEO - Talent name slug page endpoint (Paused)
