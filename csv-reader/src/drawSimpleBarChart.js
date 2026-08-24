@@ -44,7 +44,7 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - SEO - sitemap
+  // TODO: Nuvue - SEO - sitemap (cont)
   // TODO: Nuvue - About Page
 
   // TODO: Nuvue - Contact (Jacob)
