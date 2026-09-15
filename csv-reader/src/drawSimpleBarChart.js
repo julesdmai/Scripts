@@ -50,6 +50,7 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
   // TODO: Nuvue - Forgot password flow
+  // TODO: Nuvue - Link signup and login pages
 
   // TODO: Nuvue - About Page (Matt)
   // TODO: Nuvue - Contact (Jacob)
