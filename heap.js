@@ -17,15 +17,15 @@ class Heap {
     this.siftUp(this.heap.length - 1);
   }
 
-  extractMax() {
-    const max = this.heap[0];
+  extractTop() {
+    const top = this.heap[0];
     const last = this.heap.pop();
     // Root was the only element, nothing to repair
     if (this.heap.length) {
       this.heap[0] = last;
       this.siftDown(0);
     }
-    return max;
+    return top;
   }
 
   heapify() {
