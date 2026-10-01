@@ -44,13 +44,13 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
+  // TODO: Nuvue - Review Checklist (priority)
   // TODO: Nuvue - Splash Page - Fix dvh
   // TODO: Nuvue - About Page - Fix dvh footer
   
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
   
-  // TODO: Nuvue - Review Checklist
   // TODO: Nuvue - Forgot password flow
   // TODO: Nuvue - Link signup and login pages
 
