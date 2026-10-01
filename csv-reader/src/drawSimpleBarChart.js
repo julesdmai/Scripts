@@ -46,16 +46,16 @@ function drawSimpleBarChart(data) {
 
   // TODO: Nuvue - Splash Page - Fix dvh
   // TODO: Nuvue - About Page - Fix dvh footer
-
-
-  // TODO: Nuvue - Review (cont)
+  
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
+  
   // TODO: Nuvue - Review Checklist
   // TODO: Nuvue - Forgot password flow
   // TODO: Nuvue - Link signup and login pages
 
   // TODO: Nuvue - About Page (Matt)
   // TODO: Nuvue - Contact (Jacob)
+
   // TODO: Nuvue - Admin Talent List - Sort (Paused)
   // TODO: Nuvue - Admin Talent List - Thumbnail Media (Paused)
