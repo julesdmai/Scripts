@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# pair.sh - recursively rename RAF/JPG to YYYYMMDD_HHMMSS.<ext>
-#   pair.sh <folder>           preview
-#   pair.sh <folder> --apply   rename (never overwrites; collisions listed as SKIPPED)
+# trunc_rename_recursive.sh - recursively rename RAF/JPG to YYYYMMDD_HHMMSS.<ext>
+#   trunc_rename_recursive.sh <folder>           preview
+#   trunc_rename_recursive.sh <folder> --apply   rename (never overwrites; collisions listed as SKIPPED)
 # Requires bash 4+ (associative array).
 set -u
 
-usage() { echo "Usage: $0 <folder> [--apply]" >&2; exit 1; }å
+usage() { echo "Usage: $0 <folder> [--apply]" >&2; exit 1; }
 
 folder=${1:-}
 mode=${2:-}
@@ -29,8 +29,8 @@ find_photos | while IFS= read -r -d '' path; do
   name=${path##*/}   # basename
   ext=${name##*.}    # extension, original case preserved
 
-  # Skip anything not starting with YYYYMMDD_HHMMSS
-  [[ $name =~ ^([0-9]{8}_[0-9]{6}) ]] || continue
+  # Skip anything not starting with YYYYMMDD-HHMMSS
+  [[ $name =~ ^([0-9]{8}-[0-9]{6}) ]] || continue
   stamp=${BASH_REMATCH[1]}
   target="$dir/$stamp.$ext"
 
@@ -43,5 +43,5 @@ find_photos | while IFS= read -r -d '' path; do
   claimed[$key]=$stem
 
   echo "$path -> $stamp.$ext"
-  [[ $mode == --apply ]] && mv -n -- "$path" "$target"
+  if [[ $mode == --apply ]]; then mv -n -- "$path" "$target"; fi
 done
