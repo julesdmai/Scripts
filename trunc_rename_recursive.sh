@@ -1,31 +1,47 @@
-#!/bin/bash
-# trunc_rename_recursive.sh - recursively rename RAF/JPG to first 15 chars (YYYYMMDD_HHMMSS) + extension
-#   trunc_rename_recursive.sh <folder>           preview
-#   trunc_rename_recursive.sh <folder> --apply   rename (never overwrites; leftovers listed as SKIPPED)
+#!/usr/bin/env bash
+# pair.sh - recursively rename RAF/JPG to YYYYMMDD_HHMMSS.<ext>
+#   pair.sh <folder>           preview
+#   pair.sh <folder> --apply   rename (never overwrites; collisions listed as SKIPPED)
+# Requires bash 4+ (associative array).
+set -u
 
-folder="$1"
-mode="$2"
+usage() { echo "Usage: $0 <folder> [--apply]" >&2; exit 1; }å
 
-# Guard if folder arg is not a directory
-[ -d "$folder" ] || { echo "Usage: $0 <folder> [--apply]"; exit 1; }
+folder=${1:-}
+mode=${2:-}
 
+[[ -d $folder ]]                   || usageå
+[[ -z $mode || $mode == --apply ]] || usage
+
+# All RAF/JPG files (any case) under $folder, NUL-delimited, sorted
 find_photos() {
-  find "$folder" -type f \( -name '2*_*.RAF' -o -name '2*_*.JPG' \)
+  find "$folder" -type f \( -iname '*.raf' -o -iname '*.jpg' \) -print0 | sort -z
 }
 
-find_photos | while IFS= read -r path; do
-  dir="${path%/*}"      # strip shortest "/..." suffix  → parent directory
-  name="${path##*/}"    # strip longest ".../" prefix   → basename
-  stamp="${name:0:15}"  # substring, offset 0, length 15 → YYYYMMDD_HHMMSS
-  ext="${name##*.}"     # strip longest "*." prefix     → extension
+(( BASH_VERSINFO[0] >= 4 )) || { echo "bash 4+ required (brew install bash)" >&2; exit 1; }
+declare -A claimed   # dir/stamp -> source stem that owns it
 
-  if [ "$mode" = "--apply" ]; then
-    mv -n "$path" "$dir/$stamp.$ext" 2>/dev/null
-  else
-    echo "$path -> $stamp.$ext"
+# Note: the piped loop runs in a subshell. Fine here ($claimed only matters
+# inside the loop), but use `done < <(find_photos)` if you later need loop
+# state afterward, e.g. a skip count summary.
+find_photos | while IFS= read -r -d '' path; do
+  dir=${path%/*}     # parent directory
+  name=${path##*/}   # basename
+  ext=${name##*.}    # extension, original case preserved
+
+  # Skip anything not starting with YYYYMMDD_HHMMSS
+  [[ $name =~ ^([0-9]{8}_[0-9]{6}) ]] || continue
+  stamp=${BASH_REMATCH[1]}
+  target="$dir/$stamp.$ext"
+
+  stem=${name%.*}; key="$dir/$stamp"
+  [[ $path == "$target" ]] && { claimed[$key]=$stamp; continue; }
+  owner=${claimed[$key]:-}
+  if [[ -e $target || ( -n $owner && $owner != "$stem" ) ]]; then
+    echo "SKIPPED: $path ($stamp.$ext taken)"; continue
   fi
-done
+  claimed[$key]=$stem
 
-if [ "$mode" = "--apply" ]; then
-  find_photos | sed 's/^/SKIPPED: /'
-fi
+  echo "$path -> $stamp.$ext"
+  [[ $mode == --apply ]] && mv -n -- "$path" "$target"
+done
