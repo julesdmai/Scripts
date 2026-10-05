@@ -17,5 +17,5 @@ fi
  
 # LINE 1 = DRY RUN
 # LINE 2 = REAL RUN
-# bash trunc_rename.sh "/Volumes/ARCHIVE/PHOTOS/2024/2024-06-07"
-# bash trunc_rename.sh "/Volumes/ARCHIVE/PHOTOS/2024/2024-09-07" --apply
+# bash trunc_rename.sh "/Volumes/ARCHIVE/PHOTOS/2023/2023-12-16"
+# bash trunc_rename.sh "/Volumes/ARCHIVE/PHOTOS/2023/2023-12-05" --apply
