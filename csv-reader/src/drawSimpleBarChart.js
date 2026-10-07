@@ -45,6 +45,7 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - Review Checklist (priority)
   // TODO: Nuvue - Splash Page - Fix dvh
   // TODO: Nuvue - About Page - Fix dvh footer
+  // TODO: Nuvue - About Page - Placeholder
   
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
