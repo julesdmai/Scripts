@@ -42,9 +42,7 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - Review Checklist (priority)
-  // TODO: Nuvue - Splash Page - Fix dvh
-  // TODO: Nuvue - About Page - Fix dvh footer
+  // TODO: Nuvue - Review Checklist
   // TODO: Nuvue - About Page - Placeholder
   
   // TODO: Nuvue - Additional legal pages
