@@ -49,7 +49,6 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - SEO - sitemap (additional pages)
   
   // TODO: Nuvue - Forgot password flow (Supabase API) - WIP
-  // TODO: Nuvue - Link signup and login pages
 
   // TODO: Nuvue - Admin Talent List - Sort (Paused)
   // TODO: Nuvue - Admin Talent List - Thumbnail Media (Paused)
