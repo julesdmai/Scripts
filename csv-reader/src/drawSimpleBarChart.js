@@ -42,12 +42,9 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - Review Checklist
-  // TODO: Nuvue - About Page - Placeholder
-  
+  // TODO: Nuvue - About Page - Placeholder  
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
-  
   // TODO: Nuvue - Forgot password flow (Supabase API) - WIP
 
   // TODO: Nuvue - Admin Talent List - Sort (Paused)
