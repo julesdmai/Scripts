@@ -43,7 +43,7 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - Monitoring + Alerting
 
   // TODO: Nuvue - Responsive pass
-  // TODO: Nuvue - About Page - Placeholder  
+  // TODO: Nuvue - About Page - Insert placeholder
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
 
