@@ -39,6 +39,8 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In
   // TODO: Cglass - Home Page - Full Screen
+  
+  // TODO: Cglass - History Page - Create Shift
 
   // TODO: Cglass - Monitoring + Alerting
 
