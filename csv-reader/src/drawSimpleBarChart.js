@@ -48,7 +48,7 @@ function drawSimpleBarChart(data) {
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
 
-  // TODO: Nuvue - Forgot password flow (Supabase API) - WIP
+  // TODO: Nuvue - Forgot password flow - update password - bug fix
 
   // TODO: Nuvue - Admin Talent List - Sort (Paused)
   // TODO: Nuvue - Admin Talent List - Thumbnail Media (Paused)
