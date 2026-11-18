@@ -37,7 +37,7 @@ function drawSimpleBarChart(data) {
   // TODO: Cglass - About Page Migration
   // TODO: Cglass - Groups Page Migration
 
-  // TODO: Cglass - Home Page - Shift Details saving locally Before/After Clock-In
+  // TODO: Cglass - Home Page - Shift Details saving locally Before Clock-In
   // TODO: Cglass - Home Page - Full Screen
   
   // TODO: Cglass - History Page - Create Shift
