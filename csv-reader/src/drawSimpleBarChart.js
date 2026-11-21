@@ -44,7 +44,8 @@ function drawSimpleBarChart(data) {
 
   // TODO: Cglass - Monitoring + Alerting
 
-  // TODO: Nuvue - Meeting prep
+  // TODO: Nuvue - Cloudflare, implement into signup/contact pages
+  // TODO: Nuvue - Push contact up to prod
   // TODO: Nuvue - About Page - Insert placeholder
   // TODO: Nuvue - Additional legal pages
   // TODO: Nuvue - SEO - sitemap (additional pages)
